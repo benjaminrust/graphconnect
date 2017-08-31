@@ -1,4 +1,4 @@
-# Salesforce Graph Connect
+# Harding Point : Graph Connect
 
 This app allows you to quickly connect your Salesforce objects to Harding Point object graph.  For usage info see: http://www.HardingPoint.com/
 
