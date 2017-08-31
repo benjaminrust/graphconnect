@@ -19,7 +19,10 @@ linking multiple Salesforce instances to a single graph.
 
 # Installation Instructions
 1. [Login to Heroku](https://id.heroku.com/login) or [Create Heroku Credentials](https://signup.heroku.com)
+
 1. [Login to Salesforce](https://login.salesforce.com) or [Create Salesforce Developer Edition](https://developer.salesforce.com/signup)
+
+1. [Switch to Salesforce Classic](https://login.salesforce.com/lightning/switcher?destination=classic)
 
 1. [Create a Salesforce Connected App](https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp)
     1. Connected App Name `graphconnect`
@@ -38,8 +41,6 @@ linking multiple Salesforce instances to a single graph.
     1. Choose Heroku App Name
     1. Past Consumer Key & Consumer Secret into install boxes
     1. Go to Heroku Config Vars copy `GRAPHCONNECT_URL`  (Needed in Salesforce)
-    
-1. [Switch to Salesforce Classic](https://login.salesforce.com/lightning/switcher?destination=classic)
 
 1. [Update Custom Settings](https://login.salesforce.com/setup/ui/listCustomSettings.apexp) 
     1. Click on HardingPoint
