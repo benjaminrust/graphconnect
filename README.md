@@ -54,6 +54,8 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
         1. You should see your object listed Click on it (ex Lead)
         
 # Cleaning Graph
+
+The graph will automatically repopulate with any data which is inserted and/or updated. The graph will not insert duplicates as it matches on the Id.
     
 #### Delete All Data
     MATCH (n)
