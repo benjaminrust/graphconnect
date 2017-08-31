@@ -15,7 +15,6 @@ public class Webhook {
 
         HardingPoint__c hpd = HardingPoint__c.getOrgDefaults();
         System.debug('graphdburl:' + hpd.graphdburl__c);
-        System.debug('graphendpoint:' + hpd.graphendpoint__c);
 
         String graphdburl = hpd.graphdburl__c;
 
