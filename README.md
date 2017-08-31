@@ -6,7 +6,9 @@ Either use a shared instance of this app: https://graphconnect.herokuapp.com
 
 Or deploy your own instance on Heroku:
 
-#Deployment
+You will need Salesforce credentials of [Create a Developer Edition](https://developer.salesforce.com/signup)
+
+# Deployment
 1. Create a new Connected App in Salesforce:
 
     1. [Click to Create a Connected App](https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp)
@@ -29,7 +31,7 @@ Or deploy your own instance on Heroku:
     1. Update `graphdburl Custom Setting` with `GRAPHCONNECT_URL` from Heroku Config
     1. Edit the Connected App on Salesforce and update the `Callback URL` to be `https://YOUR_APP_NAME.herokuapp.com/_oauth_callback`
 
-#Testing
+# Testing
 
 1. Configure Graph Connect 
 
