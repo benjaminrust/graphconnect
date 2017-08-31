@@ -10,7 +10,7 @@ reporting, and App Development. The more data and relationships you link with [E
 builds your living [Neural Network](http://www.HardingPoint.com).
 
 * `Neural Network & AI` - Uses Additional Package on Top with your Engagement Graph
-* `Engagement Orchestration & Flow` - Uses Additional Package with your Engagement Graph
+* `Engagement Manager & Orchestration` - Uses Additional Package with your Engagement Graph
 * `Analytics & Reporting` - Uses Additional Package with your Engagement Graph
 
 Use the shared instance of this app [https://graphconnect.herokuapp.com](https://graphconnect.herokuapp.com) or deploy 
