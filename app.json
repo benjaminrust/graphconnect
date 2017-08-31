@@ -7,7 +7,7 @@
   "addons": [
     {
       "plan": "graphenedb:chalk",
-      "as": "Chalk"
+      "as": "GraphConnect"
     }
   ],
   "env": {
