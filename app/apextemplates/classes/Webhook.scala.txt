@@ -13,7 +13,13 @@ public class Webhook {
 
         String userId = JSON.serialize(UserInfo.getUserId());
 
-        String content = '{"new": ' + newObjects + ', "old": ' + oldObjects + ', "userId": ' + userId + '}';
+        HardingPoint__c hpd = HardingPoint__c.getOrgDefaults();
+        System.debug('graphdburl:' + hpd.graphdburl__c);
+        System.debug('graphendpoint:' + hpd.graphendpoint__c);
+
+        String graphdburl = hpd.graphdburl__c;
+
+        String content = '{"new": ' + newObjects + ', "old": ' + oldObjects + ', "userId": ' + userId + ', "graphdburl": "' + graphdburl + '"}';
         return content;
     }
 
