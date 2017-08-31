@@ -55,6 +55,8 @@ following instructions below.
     
 1. Change Name to `Account` (It must be unique and has a limit)
 
+1. Select SObject `Account` from SObject Dropdown
+
 1. Select [`After Insert`] and [`After Update`]
 
 1. Click [`Connect to Graph`]
