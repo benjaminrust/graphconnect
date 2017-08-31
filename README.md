@@ -99,11 +99,11 @@ duplicates as it matches on the Id.
     
     (Be Careful This Deletes Everything)
     
-##### Delete one node and all relationships
+##### Delete One Node with Relationships
     MATCH (n { name: 'Andres' })
     DETACH DELETE n
     
-##### Use the Salesforce Id vs Name
+##### Deleting Using the Salesforce Id
     
     MATCH (n { Id: '00Q1I000001xNBdUAM' })
     DETACH DELETE n
