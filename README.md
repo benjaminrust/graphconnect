@@ -5,9 +5,13 @@
 
 
 [Engagement Graph](http://www.HardingPoint.com) quickly builds and connects your Salesforce data with all your data 
-islands.  The object graph is used for deep analytics, artificial intelligence, reporting, and App Development. The 
-more data and relationships you link with [Engagement Graph](http://www.HardingPoint.com) builds your living [Neural 
-Network](http://www.HardingPoint.com).
+islands.  The [Engagement Graph](http://www.HardingPoint.com) is used for deep analytics, artificial intelligence, 
+reporting, and App Development. The more data and relationships you link with [Engagement Graph](http://www.HardingPoint.com) 
+builds your living [Neural Network](http://www.HardingPoint.com).
+
+* `Neural Network & AI` - Uses Additional Package on Top of the Engagement Graph
+* `Engagement Orchestration & Flow` - Uses Additional Package with Engagement Graph
+* `Analytics & Reporting` - Uses Additional Package with Engagement Graph
 
 Use the shared instance of this app [https://graphconnect.herokuapp.com](https://graphconnect.herokuapp.com) or deploy 
 your own instance on Heroku following instructions below. Recommend following instructions below unless you are 
