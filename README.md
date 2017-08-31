@@ -90,19 +90,20 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
         
 # Cleaning Graph
 
-The graph will automatically repopulate with any data which is inserted and/or updated. The graph will not insert duplicates as it matches on the Id.
-    
-#### Delete All Data
+The graph will automatically repopulate with any data which is inserted and/or updated. The graph will not insert 
+duplicates as it matches on the Id.
+
+##### Delete All Data
     MATCH (n)
     DETACH DELETE n
     
     (Be Careful This Deletes Everything)
     
-#### Delete one node and all relationships
+##### Delete one node and all relationships
     MATCH (n { name: 'Andres' })
     DETACH DELETE n
     
-    (Use the Salesforce Id vs Name
+##### Use the Salesforce Id vs Name
     
     MATCH (n { Id: '00Q1I000001xNBdUAM' })
     DETACH DELETE n
