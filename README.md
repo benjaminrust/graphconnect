@@ -62,7 +62,7 @@ following instructions below.
 1. Click [`Connect to Graph`]
 
 
-# Testing
+# Testing Graph Connect
     
 1. [Update a Few Account Records](https://login.salesforce.com/001) - modify any data (Sends them to Graph)
 
