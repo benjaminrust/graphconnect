@@ -5,7 +5,6 @@
   "website": "https://www.hardingpoint.com/",
   "keywords": ["salesforce","graphdb","neo4j"],
   "addons": [
-    "graphenedb",
     {
       "plan": "graphenedb:chalk",
       "as": "Chalk"
