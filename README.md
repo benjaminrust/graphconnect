@@ -12,7 +12,7 @@ Network`](http://www.HardingPoint.com).
 Either use a shared instance of this app: https://graphconnect.herokuapp.com or deploy your own instance on Heroku
 following instructions below.
 
-# Deployment
+# Installation Instructions
 1. [Login to Heroku](https://id.heroku.com/login) or [Create Heroku Credentials](https://signup.heroku.com)
 1. [Login to Salesforce](https://login.salesforce.com) or [Create Salesforce Developer Edition](https://developer.salesforce.com/signup)
 
