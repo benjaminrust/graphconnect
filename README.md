@@ -34,6 +34,7 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
     
 1. Update Salesforce Settings
 
+    1. Use Salesforce Classic to Edit Settings
     1. Update [Custom Settings](https://login.salesforce.com/setup/ui/listCustomSettings.apexp) 
         1. Click on HardingPoint
         1. Click on Manage
@@ -78,6 +79,10 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
     1. Go run the [All Contact View] (https://login.salesforce.com/003) - Mass update or update each record
     1. Go run the [All Opportunities View] (https://login.salesforce.com/006)- Mass update or update each record
     1. Go run the [All Closed Cased] (https://login.salesforce.com/500)- Mass update or update each record
+    1. Return to the Neo4j Browser 
+        1. Directions from "Visit Graph" from above
+        1. Click on "User"
+        1. Double click on your User in the Graph to expand relationships
         
         
 # Cleaning Graph
