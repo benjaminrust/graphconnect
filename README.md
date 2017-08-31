@@ -34,7 +34,7 @@ following instructions below.
     1. Past Consumer Key & Consumer Secret into install boxes
     1. Go to Heroku Config Vars copy `GRAPHCONNECT_URL`  (Needed in Salesforce)
     
-1. [Switch to Salesforce Classic](https://login.salesforce.com/lightning/switcher?destination=classic) to Edit Settings
+1. [Switch to Salesforce Classic](https://login.salesforce.com/lightning/switcher?destination=classic)
 
 1. [Update Custom Settings](https://login.salesforce.com/setup/ui/listCustomSettings.apexp) 
     1. Click on HardingPoint
