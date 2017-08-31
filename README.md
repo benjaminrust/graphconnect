@@ -74,7 +74,7 @@ following instructions below.
         1. You should see your object listed Click on it (ex Lead)
         
         
-### Reproducing Graph At Top
+# Reproducing Graph From Above Image
     
 1. Unlocking Hidden Connections
 
