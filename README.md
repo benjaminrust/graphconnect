@@ -9,7 +9,7 @@ Or deploy your own instance on Heroku:
 You will need Salesforce credentials of [Create a Developer Edition](https://developer.salesforce.com/signup)
 
 # Deployment
-1. Create a new Connected App in Salesforce:
+1. [Log into Salesforce](https://login.salesforce.com/) to Configure:
 
     1. [Click to Create a Connected App](https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp)
         1. Check `Enable OAuth Settings`
