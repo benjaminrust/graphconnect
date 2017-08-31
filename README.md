@@ -15,6 +15,8 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
 1. [Log into Salesforce](https://login.salesforce.com/) to Configure:
 
     1. [Click to Create a Connected App](https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp)
+        1. Connected App Name `graphconnect`
+        1. Contact Email `Support@HardingPoint.com`
         1. Check `Enable OAuth Settings`
         1. Set the `Callback URL` to `http://localhost:9000/_oauth_callback`
         1. In `Available OAuth Scopes` select `Full access (full)` and click `Add`
