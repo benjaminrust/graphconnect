@@ -15,37 +15,35 @@ following instructions below.
 # Deployment
 1. [Login to Heroku](https://id.heroku.com/login) or [Create Heroku Credentials](https://signup.heroku.com)
 1. [Login to Salesforce](https://login.salesforce.com) of [Create Salesforce Developer Edition](https://developer.salesforce.com/signup)
-1. [Log into Salesforce](https://login.salesforce.com/) to Configure:
 
-    1. [Click to Create a Connected App](https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp)
-        1. Connected App Name `graphconnect`
-        1. Contact Email `Support@HardingPoint.com`
-        1. Check `Enable OAuth Settings`
-        1. Set the `Callback URL` to `http://localhost:9000/_oauth_callback`
-        1. In `Available OAuth Scopes` select `Full access (full)` and click `Add`
+1. [Create a Salesforce Connected App](https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp)
+    1. Connected App Name `graphconnect`
+    1. Contact Email `Support@HardingPoint.com`
+    1. Check `Enable OAuth Settings`
+    1. Set the `Callback URL` to `http://localhost:9000/_oauth_callback`
+    1. In `Available OAuth Scopes` select `Full access (full)` and click `Add`
         1. Save the new Connected App and keep track of the Consumer Key & Consumer Secret for later use
-    1. [Click to Create a Custom Setting](https://login.salesforce.com/setup/ui/listCustomSettings.apexp)
-        1. Create Salesforce.com Custom Setting `HardingPoint as Hierarchy/Public`
-        1. Create New Custom Field in HardingPoint Custom Setting `Name:graphdburl Field Type:URL Click Save` (Leave 
+1. [Create a Salesforce Custom Setting](https://login.salesforce.com/setup/ui/listCustomSettings.apexp)
+    1. Create Salesforce.com Custom Setting `HardingPoint as Hierarchy/Public`
+    1. Create New Custom Field in HardingPoint Custom Setting `Name:graphdburl Field Type:URL Click Save` (Leave 
         page open we will change after install)
 
-1. Deploy this app on Heroku: [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+1. [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
     1. Choose Heroku App Name
     1. Past Consumer Key & Consumer Secret into install boxes
     1. Go to Heroku Config Vars copy `GRAPHCONNECT_URL`  (Needed in Salesforce)
     
-1. Update Salesforce Settings
+1. [Switch to Salesforce Classic](https://login.salesforce.com/lightning/switcher?destination=classic) to Edit Settings
 
-    1. Use Salesforce Classic to Edit Settings
-    1. Update [Custom Settings](https://login.salesforce.com/setup/ui/listCustomSettings.apexp) 
-        1. Click on HardingPoint
-        1. Click on Manage
-        1. Click on New Default Organization Level Value
-        1. Update `graphdburl` with `GRAPHCONNECT_URL` from Heroku Config
+1. [Update Custom Settings](https://login.salesforce.com/setup/ui/listCustomSettings.apexp) 
+    1. Click on HardingPoint
+    1. Click on Manage
+    1. Click on New Default Organization Level Value
+    1. Update `graphdburl` with `GRAPHCONNECT_URL` from Heroku Config
         
-    1. Edit the [Connected App](https://login.salesforce.com/02u) on Salesforce and update the `Callback URL` to be 
-    `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
+1. [Edit Connected App for Salesforce](https://login.salesforce.com/02u) 
+    1. update the `Callback URL` to be `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
 
 # Testing
 
