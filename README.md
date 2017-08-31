@@ -52,3 +52,20 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
         1. Scroll to bottom click `Launch` for Neo4j Browser
         1. Click Icon Top Left Corner
         1. You should see your object listed Click on it (ex Lead)
+        
+# Cleaning Graph
+    
+#### Delete All Data
+    MATCH (n)
+    DETACH DELETE n
+    
+    (Be Careful This Deletes Everything)
+    
+#### Delete one node and all relationships
+    MATCH (n { name: 'Andres' })
+    DETACH DELETE n
+    
+    (Use the Salesforce Id vs Name
+    
+    MATCH (n { Id: '00Q1I000001xNBdUAM' })
+    DETACH DELETE n
