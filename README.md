@@ -81,7 +81,7 @@ linking multiple Salesforce instances to a single graph.
     
 1. Unlocking Hidden Connections
 
-    1. [Deploy Engagement Graph](http://www.HardingPoint.com) to User, Contact, Opportunity, Case
+    1. [Deploy Graph Connect](http://www.HardingPoint.com) to User, Contact, Opportunity, Case
         1. Following "Deploying Engagement Graph" from Above for all objects listed above @ https://<YOUR_APP_NAME>.herokuapp.com
     1. Update your user or a user associated with the records (we used a demo account)
     1. Edit/Save your user [All Users](https://login.salesforce.com/005) - Change 1 piece of data
