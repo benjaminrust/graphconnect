@@ -4,6 +4,13 @@
   "repository": "https://github.com/HardingPoint/graphconnect.git",
   "website": "https://www.hardingpoint.com/",
   "keywords": ["salesforce","graphdb","neo4j"],
+  "addons": [
+    "graphenedb",
+    {
+      "plan": "graphenedb:chalk",
+      "as": "Chalk"
+    }
+  ],
   "env": {
     "APPLICATION_SECRET": {
       "description": "A secret key for crypto and signed cookies.",
