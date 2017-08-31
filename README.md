@@ -45,19 +45,25 @@ following instructions below.
 1. [Edit Connected App for Salesforce](https://login.salesforce.com/02u) 
     1. update the `Callback URL` to be `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
 
-# Testing
+# Deploying Graph Connect
 
-1. Configure [`Graph Connect`](http://www.HardingPoint.com)
+1. Login to https://<YOUR_APP_NAME>.herokuapp.com
 
-    1. Visit https://<YOUR_APP_NAME>.herokuapp.com
-    1. Login Via Salesforce
-    1. Choose SObject you want to add to graph (Recommend Try Lead)
-    1. Select after insert AND after update
-    1. Change Name (has to be unique) - it will automatically add WebhookTrigger to end
-        1. There is a limit to name length
-    1. Connect to Graph
-    1. Edit and Save Lead
+1. Click [`Login via Salesforce - Normal Instance`]
+
+    1. If you get a `Routing` error it is because Salesforce has not finished updating (wait 4 minutes)
     
+1. Change Name to `Account` (It must be unique and has a limit)
+
+1. Select [`After Insert`] and [`After Update`]
+
+1. Click [`Connect to Graph`]
+
+
+# Testing
+    
+1. [Update a Few Account Records](https://login.salesforce.com/001) - modify any data (Sends them to Graph)
+
 1. Visit Graph
     
     1. Go back to your Heroku Dashboard and into <YOUR_APP_NAME>
@@ -72,11 +78,10 @@ following instructions below.
     
 1. Unlocking Hidden Connections
 
-    1. Add [`Graph Connect`](http://www.HardingPoint.com) to User, Account, Contact, Opportunity, Case
-        1. Following Step #1 under Testing Above for all objects listed above @ https://<YOUR_APP_NAME>.herokuapp.com
+    1. [Deploy Graph Connect](http://www.HardingPoint.com) to User, Contact, Opportunity, Case
+        1. Following "Deploying Graph Connect" from Above for all objects listed above @ https://<YOUR_APP_NAME>.herokuapp.com
     1. Update your user or a user associated with the records (we used a demo account)
     1. Edit/Save your user [All Users](https://login.salesforce.com/005) - Change 1 piece of data
-    1. Go run the [All Open Leads View](https://login.salesforce.com/00Q) - Mass update or update each record
     1. Go run the [All Accounts View](https://login.salesforce.com/001) - Mass update or update each record
     1. Go run the [All Contact View](https://login.salesforce.com/003) - Mass update or update each record
     1. Go run the [All Opportunities View](https://login.salesforce.com/006)- Mass update or update each record
