@@ -1,13 +1,13 @@
-# Harding Point : Graph Connect
+# Harding Point : Engagement Graph : Connect
  
 
-![Harding Point Graph Connect](https://static.wixstatic.com/media/983560_7563ad3d347646e1a792e19a2c14e44c~mv2_d_2754_1836_s_2.png/v1/fill/w_1545,h_1030,al_c,usm_0.66_1.00_0.01/983560_7563ad3d347646e1a792e19a2c14e44c~mv2_d_2754_1836_s_2.png "Harding Point Graph Connect")
+![Harding Point Engagement Graph](https://static.wixstatic.com/media/983560_7563ad3d347646e1a792e19a2c14e44c~mv2_d_2754_1836_s_2.png/v1/fill/w_1545,h_1030,al_c,usm_0.66_1.00_0.01/983560_7563ad3d347646e1a792e19a2c14e44c~mv2_d_2754_1836_s_2.png "Harding Point Graph Connect")
 
 
-[`Graph Connect`](http://www.HardingPoint.com) quickly builds and connects your Salesforce data with all your data 
+[Engagement Graph](http://www.HardingPoint.com) quickly builds and connects your Salesforce data with all your data 
 islands.  The object graph is used for deep analytics, artificial intelligence, reporting, and App Development. The 
-more data and relationships you link with [`Graph Connect`](http://www.HardingPoint.com) builds your living [`Neural 
-Network`](http://www.HardingPoint.com).
+more data and relationships you link with [Engagement Graph](http://www.HardingPoint.com) builds your living [Neural 
+Network](http://www.HardingPoint.com).
 
 Use the shared instance of this app [https://graphconnect.herokuapp.com](https://graphconnect.herokuapp.com) or deploy 
 your own instance on Heroku following instructions below. Recommend following instructions below unless you are 
@@ -46,7 +46,7 @@ linking multiple Salesforce instances to a single graph.
 1. [Edit Connected App for Salesforce](https://login.salesforce.com/02u) 
     1. update the `Callback URL` to be `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
 
-# Deploying Graph Connect for Accounts
+# Deploying Engagement Graph for Accounts
 
 1. Login to https://<YOUR_APP_NAME>.herokuapp.com
 
@@ -63,7 +63,7 @@ linking multiple Salesforce instances to a single graph.
 1. Click [`Connect to Graph`]
 
 
-# Testing Graph Connect
+# Testing Engagement Graph
     
 1. [Update a Few Account Records](https://login.salesforce.com/001) - modify any data (Sends them to Graph)
 
@@ -81,8 +81,8 @@ linking multiple Salesforce instances to a single graph.
     
 1. Unlocking Hidden Connections
 
-    1. [Deploy Graph Connect](http://www.HardingPoint.com) to User, Contact, Opportunity, Case
-        1. Following "Deploying Graph Connect" from Above for all objects listed above @ https://<YOUR_APP_NAME>.herokuapp.com
+    1. [Deploy Engagement Graph](http://www.HardingPoint.com) to User, Contact, Opportunity, Case
+        1. Following "Deploying Engagement Graph" from Above for all objects listed above @ https://<YOUR_APP_NAME>.herokuapp.com
     1. Update your user or a user associated with the records (we used a demo account)
     1. Edit/Save your user [All Users](https://login.salesforce.com/005) - Change 1 piece of data
     1. Go run the [All Accounts View](https://login.salesforce.com/001) - Mass update or update each record
