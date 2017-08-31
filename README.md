@@ -9,8 +9,9 @@ islands.  The object graph is used for deep analytics, artificial intelligence, 
 more data and relationships you link with [`Graph Connect`](http://www.HardingPoint.com) builds your living [`Neural 
 Network`](http://www.HardingPoint.com).
 
-Either use a shared instance of this app: https://graphconnect.herokuapp.com or deploy your own instance on Heroku
-following instructions below.
+Use the shared instance of this app [https://graphconnect.herokuapp.com](https://graphconnect.herokuapp.com) or deploy 
+your own instance on Heroku following instructions below. Recommend following instructions below unless you are 
+linking multiple Salesforce instances to a single graph.
 
 # Installation Instructions
 1. [Login to Heroku](https://id.heroku.com/login) or [Create Heroku Credentials](https://signup.heroku.com)
