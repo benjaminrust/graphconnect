@@ -7,7 +7,7 @@
 [Engagement Graph](http://www.HardingPoint.com) quickly builds and connects your Salesforce data with all your data 
 islands.  The [Engagement Graph](http://www.HardingPoint.com) is used for deep analytics, artificial intelligence, 
 reporting, and App Development. The more data and relationships you link with [Engagement Graph](http://www.HardingPoint.com) 
-builds your living [Neural Network](http://www.HardingPoint.com).
+the quicker it builds and learns from your living [Neural Network](http://www.HardingPoint.com).
 
 * `Neural Network & AI` - Uses Additional Package on Top with your Engagement Graph
 * `Engagement Manager & Orchestration` - Uses Additional Package with your Engagement Graph
