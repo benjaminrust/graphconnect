@@ -77,7 +77,7 @@ linking multiple Salesforce instances to a single graph.
         1. You should see your object listed Click on it (ex Lead)
         
         
-# Reproducing Graph From Above Image
+# Reproducing Engagement Graph From Above Image
     
 1. Unlocking Hidden Connections
 
