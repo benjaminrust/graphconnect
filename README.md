@@ -9,9 +9,9 @@ islands.  The [Engagement Graph](http://www.HardingPoint.com) is used for deep a
 reporting, and App Development. The more data and relationships you link with [Engagement Graph](http://www.HardingPoint.com) 
 builds your living [Neural Network](http://www.HardingPoint.com).
 
-* `Neural Network & AI` - Uses Additional Package on Top of the Engagement Graph
-* `Engagement Orchestration & Flow` - Uses Additional Package with Engagement Graph
-* `Analytics & Reporting` - Uses Additional Package with Engagement Graph
+* `Neural Network & AI` - Uses Additional Package on Top with your Engagement Graph
+* `Engagement Orchestration & Flow` - Uses Additional Package with your Engagement Graph
+* `Analytics & Reporting` - Uses Additional Package with your Engagement Graph
 
 Use the shared instance of this app [https://graphconnect.herokuapp.com](https://graphconnect.herokuapp.com) or deploy 
 your own instance on Heroku following instructions below. Recommend following instructions below unless you are 
