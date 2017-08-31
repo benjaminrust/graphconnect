@@ -73,12 +73,12 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
     1. Add Graph Connect to User, Account, Contact, Opportunity, Case
         1. Following Step #1 under Testing Above for all objects listed above @ https://<YOUR_APP_NAME>.herokuapp.com
     1. Update your user or a user associated with the records (we used a demo account)
-    1. Edit/Save your user [All Users] (https://login.salesforce.com/005) - Change 1 piece of data
-    1. Go run the [All Open Leads View] (https://login.salesforce.com/00Q) - Mass update or update each record
-    1. Go run the [All Accounts View] (https://login.salesforce.com/001) - Mass update or update each record
-    1. Go run the [All Contact View] (https://login.salesforce.com/003) - Mass update or update each record
-    1. Go run the [All Opportunities View] (https://login.salesforce.com/006)- Mass update or update each record
-    1. Go run the [All Closed Cased] (https://login.salesforce.com/500)- Mass update or update each record
+    1. Edit/Save your user [All Users](https://login.salesforce.com/005) - Change 1 piece of data
+    1. Go run the [All Open Leads View](https://login.salesforce.com/00Q) - Mass update or update each record
+    1. Go run the [All Accounts View](https://login.salesforce.com/001) - Mass update or update each record
+    1. Go run the [All Contact View](https://login.salesforce.com/003) - Mass update or update each record
+    1. Go run the [All Opportunities View](https://login.salesforce.com/006)- Mass update or update each record
+    1. Go run the [All Closed Cased](https://login.salesforce.com/500)- Mass update or update each record
     1. Return to the Neo4j Browser 
         1. Directions from "Visit Graph" from above
         1. Click on "User"
