@@ -6,14 +6,15 @@ Either use a shared instance of this app: https://graphconnect.herokuapp.com
 
 Or deploy your own instance on Heroku:
 
+#Deployment
 1. Create a new Connected App in Salesforce:
 
-    1. [Create a Connected App](https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp)
+    1. [Click to Create a Connected App](https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp)
         1. Check `Enable OAuth Settings`
         1. Set the `Callback URL` to `http://localhost:9000/_oauth_callback`
         1. In `Available OAuth Scopes` select `Full access (full)` and click `Add`
         1. Save the new Connected App and keep track of the Consumer Key & Consumer Secret for later use
-    1. [Create a Custom Setting](https://login.salesforce.com/setup/ui/listCustomSettings.apexp)
+    1. [Click to Create a Custom Setting](https://login.salesforce.com/setup/ui/listCustomSettings.apexp)
         1. Create Salesforce.com Custom Setting `HardingPoint as Hierarchy/Public`
         1. Create New Custom Field in HardingPoint Custom Setting `graphdburl type URL click save` (Leave page open we will change after install)
 
@@ -27,3 +28,25 @@ Or deploy your own instance on Heroku:
 
     1. Update `graphdburl Custom Setting` with `GRAPHCONNECT_URL` from Heroku Config
     1. Edit the Connected App on Salesforce and update the `Callback URL` to be `https://YOUR_APP_NAME.herokuapp.com/_oauth_callback`
+
+#Testing
+
+1. Configure Graph Connect 
+
+    1. Visit https://<YOUR_APP_NAME>.herokuapp.com
+    1. Login Via Salesforce
+    1. Choose SObject you want to add to graph (Recommend Try Lead)
+    1. Select after insert AND after update
+    1. Change Name (has to be unique) - it will automatically add WebhookTrigger to end
+        1. There is a limit to name length
+    1. Connect to Graph
+    1. Edit and Save Lead
+    
+1. Visit Graph
+    
+    1. Go back to your Heroku Dashboard and into <YOUR_APP_NAME>
+    1. Click Resources
+    1. Click GrapheneDB
+        1. Scroll to bottom click `Launch` for Neo4j Browser
+        1. Click Icon Top Left Corner
+        1. You should see your object listed Click on it (ex Lead)
