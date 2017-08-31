@@ -14,7 +14,7 @@ following instructions below.
 
 # Deployment
 1. [Login to Heroku](https://id.heroku.com/login) or [Create Heroku Credentials](https://signup.heroku.com)
-1. [Login to Salesforce](https://login.salesforce.com) of [Create Salesforce Developer Edition](https://developer.salesforce.com/signup)
+1. [Login to Salesforce](https://login.salesforce.com) or [Create Salesforce Developer Edition](https://developer.salesforce.com/signup)
 
 1. [Create a Salesforce Connected App](https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp)
     1. Connected App Name `graphconnect`
