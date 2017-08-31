@@ -18,7 +18,7 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
         1. Save the new Connected App and keep track of the Consumer Key & Consumer Secret for later use
     1. [Click to Create a Custom Setting](https://login.salesforce.com/setup/ui/listCustomSettings.apexp)
         1. Create Salesforce.com Custom Setting `HardingPoint as Hierarchy/Public`
-        1. Create New Custom Field in HardingPoint Custom Setting `graphdburl type URL click save` (Leave page open we will change after install)
+        1. Create New Custom Field in HardingPoint Custom Setting `Name:graphdburl Field Type:URL Click Cave` (Leave page open we will change after install)
 
 1. Deploy this app on Heroku: [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
