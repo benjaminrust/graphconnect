@@ -34,8 +34,8 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
     
 1. Update Salesforce Settings
 
-    1. Update `graphdburl Custom Setting` with `GRAPHCONNECT_URL` from Heroku Config
-    1. Edit the Connected App on Salesforce and update the `Callback URL` to be `https://YOUR_APP_NAME.herokuapp.com/_oauth_callback`
+    1. Update [Custom Settings](https://login.salesforce.com/setup/ui/listCustomSettings.apexp) with `graphdburl Custom Setting` with `GRAPHCONNECT_URL` from Heroku Config
+    1. Edit the [Connected App](https://login.salesforce.com/02u) on Salesforce and update the `Callback URL` to be `https://YOUR_APP_NAME.herokuapp.com/_oauth_callback`
 
 # Testing
 
@@ -60,7 +60,7 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
         1. You should see your object listed Click on it (ex Lead)
         
         
-#### Reproducing Graph At Top
+### Reproducing Graph At Top
     
 1. Unlocking Hidden Connections
 
