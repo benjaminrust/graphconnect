@@ -4,10 +4,10 @@
 ![Harding Point Graph Connect](https://static.wixstatic.com/media/983560_7563ad3d347646e1a792e19a2c14e44c~mv2_d_2754_1836_s_2.png/v1/fill/w_1545,h_1030,al_c,usm_0.66_1.00_0.01/983560_7563ad3d347646e1a792e19a2c14e44c~mv2_d_2754_1836_s_2.png "Harding Point Graph Connect")
 
 
-[`Graph Connect`](http://www.HardingPoint.com) quickly builds and connects your Salesforce data with all your data islands.  The object graph 
-is used for deep analytics, artificial intelligence, reporting, and App Development. The more data and relationships
-you link with [`Graph Connect`](http://www.HardingPoint.com) builds your living [`Neural Network`](http://www.HardingPoint.com).
-
+[`Graph Connect`](http://www.HardingPoint.com) quickly builds and connects your Salesforce data with all your data 
+islands.  The object graph is used for deep analytics, artificial intelligence, reporting, and App Development. The 
+more data and relationships you link with [`Graph Connect`](http://www.HardingPoint.com) builds your living [`Neural 
+Network`](http://www.HardingPoint.com).
 
 Either use a shared instance of this app: https://graphconnect.herokuapp.com
 
@@ -27,7 +27,8 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
         1. Save the new Connected App and keep track of the Consumer Key & Consumer Secret for later use
     1. [Click to Create a Custom Setting](https://login.salesforce.com/setup/ui/listCustomSettings.apexp)
         1. Create Salesforce.com Custom Setting `HardingPoint as Hierarchy/Public`
-        1. Create New Custom Field in HardingPoint Custom Setting `Name:graphdburl Field Type:URL Click Cave` (Leave page open we will change after install)
+        1. Create New Custom Field in HardingPoint Custom Setting `Name:graphdburl Field Type:URL Click Save` (Leave 
+        page open we will change after install)
 
 1. Deploy this app on Heroku: [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
@@ -44,7 +45,8 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
         1. Click on New Default Organization Level Value
         1. Update `graphdburl` with `GRAPHCONNECT_URL` from Heroku Config
         
-    1. Edit the [Connected App](https://login.salesforce.com/02u) on Salesforce and update the `Callback URL` to be `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
+    1. Edit the [Connected App](https://login.salesforce.com/02u) on Salesforce and update the `Callback URL` to be 
+    `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
 
 # Testing
 
