@@ -1,6 +1,6 @@
 {
   "name": "Harding Point : GraphConnect",
-  "description": "Install GraphConnect",
+  "description": "Engagement Graph quickly builds and connects your Salesforce data with all your data islands. The object graph is used for deep analytics, artificial intelligence, reporting, and App Development. The more data and relationships you link with Engagement Graph builds your living Neural Network.",
   "repository": "https://github.com/HardingPoint/graphconnect.git",
   "website": "https://www.hardingpoint.com/",
   "keywords": ["salesforce","graphdb","neo4j"],
