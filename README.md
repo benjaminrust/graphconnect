@@ -45,7 +45,7 @@ following instructions below.
 1. [Edit Connected App for Salesforce](https://login.salesforce.com/02u) 
     1. update the `Callback URL` to be `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
 
-# Deploying Graph Connect
+# Deploying Graph Connect for Accounts
 
 1. Login to https://<YOUR_APP_NAME>.herokuapp.com
 
