@@ -4,7 +4,9 @@
 ![Harding Point Graph Connect](https://static.wixstatic.com/media/983560_7563ad3d347646e1a792e19a2c14e44c~mv2_d_2754_1836_s_2.png/v1/fill/w_1545,h_1030,al_c,usm_0.66_1.00_0.01/983560_7563ad3d347646e1a792e19a2c14e44c~mv2_d_2754_1836_s_2.png "Harding Point Graph Connect")
 
 
-This app allows you to quickly connect your Salesforce objects to Harding Point object graph.  For usage info see: http://www.HardingPoint.com/
+`Graph Connect` quickly builds and connects your Salesforce data with all your data islands.  The object graph 
+is used for deep analytics, artificial intelligence, reporting, and App Development. The more data and relationships
+you feed into your object graph growing into building a business `Neural Network`.
 
 Either use a shared instance of this app: https://graphconnect.herokuapp.com
 
