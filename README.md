@@ -41,7 +41,7 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
         1. Click on New Default Organization Level Value
         1. Update `graphdburl` with `GRAPHCONNECT_URL` from Heroku Config
         
-    1. Edit the [Connected App](https://login.salesforce.com/02u) on Salesforce and update the `Callback URL` to be `https://YOUR_APP_NAME.herokuapp.com/_oauth_callback`
+    1. Edit the [Connected App](https://login.salesforce.com/02u) on Salesforce and update the `Callback URL` to be `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
 
 # Testing
 
