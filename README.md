@@ -1,4 +1,4 @@
-# Harding Point : Graph Connect
+# Harding Point : [`Graph Connect`](http://www.HardingPoint.com)
  
 
 ![Harding Point Graph Connect](https://static.wixstatic.com/media/983560_7563ad3d347646e1a792e19a2c14e44c~mv2_d_2754_1836_s_2.png/v1/fill/w_1545,h_1030,al_c,usm_0.66_1.00_0.01/983560_7563ad3d347646e1a792e19a2c14e44c~mv2_d_2754_1836_s_2.png "Harding Point Graph Connect")
@@ -48,7 +48,7 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
 
 # Testing
 
-1. Configure Graph Connect 
+1. Configure [`Graph Connect`](http://www.HardingPoint.com)
 
     1. Visit https://<YOUR_APP_NAME>.herokuapp.com
     1. Login Via Salesforce
@@ -73,7 +73,7 @@ You will need Salesforce credentials of [Create a Developer Edition](https://dev
     
 1. Unlocking Hidden Connections
 
-    1. Add Graph Connect to User, Account, Contact, Opportunity, Case
+    1. Add [`Graph Connect`](http://www.HardingPoint.com) to User, Account, Contact, Opportunity, Case
         1. Following Step #1 under Testing Above for all objects listed above @ https://<YOUR_APP_NAME>.herokuapp.com
     1. Update your user or a user associated with the records (we used a demo account)
     1. Edit/Save your user [All Users](https://login.salesforce.com/005) - Change 1 piece of data
