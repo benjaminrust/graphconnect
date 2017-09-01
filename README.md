@@ -40,6 +40,7 @@ linking multiple Salesforce instances to a single graph.
 
     1. Choose Heroku App Name
     1. Past Consumer Key & Consumer Secret into install boxes
+        1. `Values copied from when you created Connected App in Salesforce.`
     1. Go to Heroku Config Vars copy `GRAPHCONNECT_URL`  (Needed in Salesforce)
 
 1. [Update Custom Settings](https://login.salesforce.com/setup/ui/listCustomSettings.apexp) 
