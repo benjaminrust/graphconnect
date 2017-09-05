@@ -18,7 +18,7 @@ public class Webhook {
 
         String graphdburl = hpd.graphdburl__c;
 
-        String content = '{"new": ' + newObjects + ', "old": ' + oldObjects + ', "userId": ' + userId + ', "graphdburl": "' + graphdburl + '"}';
+        String content = '{"new": ' + newObjects + ', "old": ' + oldObjects + ', "orgId": "'+ UserInfo.getOrganizationId() +  '", "userId": ' + userId + ', "graphdburl": "' + graphdburl + '"}';
         return content;
     }
 
