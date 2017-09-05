@@ -24,7 +24,7 @@ linking multiple Salesforce instances to a single graph.
 
 1. <a href="https://login.salesforce.com/lightning/switcher?destination=classic" target="_new">Switch to Salesforce Classic</a>
 
-1. <a href="https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp" target="_new">Create a Salesforce Connected App</>
+1. <a href="https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp" target="_new">Create a Salesforce Connected App</a>
     1. Connected App Name `graphconnect`
     1. Contact Email `Support@HardingPoint.com`
     1. Check `Enable OAuth Settings`
