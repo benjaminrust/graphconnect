@@ -13,25 +13,25 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
 * `Engagement Manager & Orchestration` - Uses Additional Package with your Engagement Graph
 * `Analytics & Reporting` - Uses Additional Package with your Engagement Graph
 
-Use the shared instance of this app [https://graphconnect.herokuapp.com](https://graphconnect.herokuapp.com) or deploy 
+Use the shared instance of this app <a href="https://graphconnect.herokuapp.com" target="_blank">https://graphconnect.herokuapp.com</a> or deploy 
 your own instance on Heroku following instructions below. Recommend following instructions below unless you are 
 linking multiple Salesforce instances to a single graph.
 
 # Installation Instructions
-1. [Login to Heroku](https://id.heroku.com/login) or [Create Heroku Credentials](https://signup.heroku.com)
+1. <a href="https://id.heroku.com/login" target="_blank">Login to Heroku</a> or <a href="https://signup.heroku.com" target="_blank">Create Heroku Credentials</a>
 
-1. [Login to Salesforce](https://login.salesforce.com) or [Create Salesforce Developer Edition](https://developer.salesforce.com/signup)
+1. <a href="https://login.salesforce.com" target="_blank">Login to Salesforce</a> or <a href="https://developer.salesforce.com/signup" target="_blank">Create Salesforce Developer Edition</a>
 
-1. [Switch to Salesforce Classic](https://login.salesforce.com/lightning/switcher?destination=classic)
+1. <a href="https://login.salesforce.com/lightning/switcher?destination=classic" target="_blank">Switch to Salesforce Classic</a>
 
-1. [Create a Salesforce Connected App](https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp)
+1. <a href="https://login.salesforce.com/app/mgmt/forceconnectedapps/forceAppEdit.apexp" target="_blank">Create a Salesforce Connected App</>
     1. Connected App Name `graphconnect`
     1. Contact Email `Support@HardingPoint.com`
     1. Check `Enable OAuth Settings`
     1. Set the `Callback URL` to `http://localhost:9000/_oauth_callback`
     1. In `Available OAuth Scopes` select `Full access (full)` and click `Add`
         1. Save the new Connected App and keep track of the Consumer Key & Consumer Secret for later use
-1. [Create a Salesforce Custom Setting](https://login.salesforce.com/setup/ui/listCustomSettings.apexp)
+1. <a href="https://login.salesforce.com/setup/ui/listCustomSettings.apexp" target="_blank">Create a Salesforce Custom Setting</a>
     1. Create Salesforce.com Custom Setting `HardingPoint as Hierarchy/Public`
     1. Create New Custom Field in HardingPoint Custom Setting `Name:graphdburl Field Type:URL Click Save` (Leave 
         page open we will change after install)
@@ -43,13 +43,13 @@ linking multiple Salesforce instances to a single graph.
         1. Values from above when you created 'Connected App' in Salesforce.
     1. Go to Heroku Config Vars copy `GRAPHCONNECT_URL`  (Needed in Salesforce)
 
-1. [Update Custom Settings](https://login.salesforce.com/setup/ui/listCustomSettings.apexp) 
+1. <a href="https://login.salesforce.com/setup/ui/listCustomSettings.apexp" target="_blank">Update Custom Settings</a>
     1. Click on HardingPoint
     1. Click on Manage
     1. Click on New Default Organization Level Value
     1. Update `graphdburl` with `GRAPHCONNECT_URL` from Heroku Config
         
-1. [Edit Connected App for Salesforce](https://login.salesforce.com/02u) 
+1. <a href="https://login.salesforce.com/02u" target="_blank">Edit Connected App for Salesforce</a>
     1. update the `Callback URL` to be `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
 
 # Deploying Graph Connect for Accounts
@@ -71,7 +71,7 @@ linking multiple Salesforce instances to a single graph.
 
 # Testing Engagement Graph
     
-1. [Update a Few Account Records](https://login.salesforce.com/001) - modify any data (Sends them to Graph)
+1. <a href="https://login.salesforce.com/001" target="_blank">Update a Few Account Records</a> - modify any data (Sends them to Graph)
 
 1. Visit Graph
     
@@ -90,11 +90,11 @@ linking multiple Salesforce instances to a single graph.
     1. [Deploy Graph Connect](http://www.HardingPoint.com) to User, Contact, Opportunity, Case
         1. Following "Deploying Engagement Graph" from Above for all objects listed above @ https://<YOUR_APP_NAME>.herokuapp.com
     1. Update your user or a user associated with the records (we used a demo account)
-    1. Edit/Save your user [All Users](https://login.salesforce.com/005) - Change 1 piece of data
-    1. Go run the [All Accounts View](https://login.salesforce.com/001) - Mass update or update each record
-    1. Go run the [All Contact View](https://login.salesforce.com/003) - Mass update or update each record
-    1. Go run the [All Opportunities View](https://login.salesforce.com/006)- Mass update or update each record
-    1. Go run the [All Closed Cased](https://login.salesforce.com/500)- Mass update or update each record
+    1. Edit/Save your user <a href="All Users" target="_blank">https://login.salesforce.com/005</a> - Change 1 piece of data
+    1. Go run the <a href="https://login.salesforce.com/001" target="_blank">All Accounts View</a> - Mass update or update each record
+    1. Go run the <a href="https://login.salesforce.com/003" target="_blank">All Contact View</a> - Mass update or update each record
+    1. Go run the <a href="https://login.salesforce.com/006" target="_blank">All Opportunities View</a> - Mass update or update each record
+    1. Go run the <a href="https://login.salesforce.com/500" target="_blank">All Closed Cased</a> - Mass update or update each record
     1. Return to the Neo4j Browser 
         1. Directions from "Visit Graph" from above
         1. Click on "User"
