@@ -13,7 +13,7 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
 * `Engagement Manager & Orchestration` - Uses Additional Package with your Engagement Graph
 * `Analytics & Reporting` - Uses Additional Package with your Engagement Graph
 
-Use the shared instance of this app <a href="https://graphconnect.herokuapp.com" target="_new">https://graphconnect.herokuapp.com</a> or deploy 
+Use the shared instance of this app <a href="https://engagementgraph.herokuapp.com/" target="_new">https://graphconnect.herokuapp.com</a> or deploy 
 your own instance on Heroku following instructions below. Recommend following instructions below unless you are 
 linking multiple Salesforce instances to a single graph.
 
