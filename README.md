@@ -12,7 +12,7 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
 * `Neural Network & AI` - Uses Additional Package on Top with your Engagement Graph
 * `Engagement Manager & Orchestration` - Uses Additional Package with your Engagement Graph
 * `Analytics & Reporting` - Uses Additional Package with your Engagement Graph
-* ['Engagement Browser' - Demo](https://engagementbrowser.herokuapp.com/?neoid=0011I000003ExJzQAK) - Try Custom App Demo Now Powered by Graph Connect
+* [`Engagement Browser` - Demo](https://engagementbrowser.herokuapp.com/?neoid=0011I000003ExJzQAK) - Try Custom App Demo Now Powered by Graph Connect
 
 Use the shared instance of this app <a href="https://engagementgraph.herokuapp.com/" target="_new">https://engagementgraph.herokuapp.com/</a> or deploy 
 your own instance on Heroku following instructions below. Recommend following instructions below unless you are 
