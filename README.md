@@ -10,7 +10,7 @@ reporting, and App Development. The more data and relationships you link with yo
 the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from your [Neural Network](http://www.HardingPoint.com).
 
 * [`Engagement Browser` - Try Custom App Demo Now ](https://engagementbrowser.herokuapp.com/?neoid=0011I000003ExJzQAK) - Powered by Graph Connect - Synchronized from Salesforce
-* []`Engagement Manager & Orchestration` - Login: readonly/readonly](http://engage.hardingpoint.com/) - Uses Additional Package with your Engagement Graph
+* [`Engagement Manager & Orchestration` - Login: readonly/readonly](http://engage.hardingpoint.com/) - Uses Additional Package with your Engagement Graph
 * `Neural Network & AI` - Uses Additional Package on Top with your Engagement Graph
 * `Analytics & Reporting` - Uses Additional Package with your Engagement Graph
 
