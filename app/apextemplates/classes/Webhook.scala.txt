@@ -37,6 +37,7 @@ public class Webhook {
         req.setMethod('POST');
         req.setHeader('Content-Type', 'application/json');
         req.setHeader('authorizationToken', hpd.authorizationToken__c);
+        req.setHeader('organizationId', UserInfo.getOrganizationId() );
         req.setBody(content);
 
         h.send(req);
