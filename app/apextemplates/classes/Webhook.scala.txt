@@ -5,26 +5,22 @@ public class Webhook {
         if (triggerNew != null) {
             newObjects = JSON.serialize(triggerNew);
         }
-
         String oldObjects = '[]';
         if (triggerOld != null) {
             oldObjects = JSON.serialize(triggerOld);
         }
-
         String userId = JSON.serialize(UserInfo.getUserId());
-
         HardingPoint__c hpd = HardingPoint__c.getOrgDefaults();
         System.debug('graphdburl:' + hpd.graphdburl__c);
-
         String graphdburl = hpd.graphdburl__c;
-
-        String content = '{"new": ' + newObjects + ', "old": ' + oldObjects + ', "orgId": "'+ UserInfo.getOrganizationId() +  '", "userId": ' + userId + ', "graphdburl": "' + graphdburl + '"}';
+        // No need to send the Old Objects (Reduce size of JSON payload
+        // String content = '{"new": ' + newObjects + ', "old": ' + oldObjects + ', "orgId": "'+ UserInfo.getOrganizationId() +  '", "userId": ' + userId + ', "graphdburl": "' + graphdburl + '"}';
+        String content = '{"new": ' + newObjects + ', "orgId": "'+ UserInfo.getOrganizationId() +  '", "userId": ' + userId + ', "graphdburl": "' + graphdburl + '"}';
         return content;
     }
 
     @@future(callout=true)
     public static void callout(String url, String content) {
-
         Http h = new Http();
         HttpRequest req = new HttpRequest();
         HardingPoint__c hpd = HardingPoint__c.getOrgDefaults();
@@ -33,13 +29,11 @@ public class Webhook {
         }else{
             req.setEndpoint(url);
         }
-        req.setEndpoint(url);
         req.setMethod('POST');
         req.setHeader('Content-Type', 'application/json');
         req.setHeader('authorizationToken', hpd.authorizationToken__c);
         req.setHeader('organizationId', UserInfo.getOrganizationId() );
         req.setBody(content);
-
         h.send(req);
     }
 
