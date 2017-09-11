@@ -29,8 +29,11 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
     1. Set the `Callback URL` to `http://localhost:9000/_oauth_callback`
     1. In `Available OAuth Scopes` select `Full access (full)` and click `Add`
         1. Save the new Connected App and keep track of the Consumer Key & Consumer Secret for later use
+        
 1. <a href="https://login.salesforce.com/setup/ui/listCustomSettings.apexp" target="_new">Create a Salesforce Custom Setting</a>
     1. Create Salesforce.com Custom Setting `HardingPoint as Hierarchy/Public`
+    1. Create New Custom Field in HardingPoint Custom Setting `Name:authorizationToken Field Type: Text(255)`
+    1. Create New Custom Field in HardingPoint Custom Setting `Name:GraphConnectURL Field Type: URL`
     1. Create New Custom Field in HardingPoint Custom Setting `Name:graphdburl Field Type:URL Click Save` (Leave 
         page open we will change after install)
 
@@ -46,6 +49,8 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
     1. Click on Manage
     1. Click on New Default Organization Level Value
     1. Update `graphdburl` with `GRAPHCONNECT_URL` from Heroku Config
+    1. Update `GraphConnectURL` with `https://dev.hardingpoint.com/v9.3/api`
+    1. Update `authorizationToken` with `HARDINGPOINT321` (This is temporary for testing)
         
 1. <a href="https://login.salesforce.com/02u" target="_new">Edit Connected App for Salesforce</a>
     1. update the `Callback URL` to be `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
