@@ -26,11 +26,17 @@ public class Webhook {
     public static void callout(String url, String content) {
 
         Http h = new Http();
-
         HttpRequest req = new HttpRequest();
+        HardingPoint__c hpd = HardingPoint__c.getOrgDefaults();
+        if (hpd.GraphConnectURL__c!=''){
+            req.setEndpoint(hpd.GraphConnectURL__c);
+        }else{
+            req.setEndpoint(url);
+        }
         req.setEndpoint(url);
         req.setMethod('POST');
         req.setHeader('Content-Type', 'application/json');
+        req.setHeader('authorizationToken', hpd.authorizationToken__c);
         req.setBody(content);
 
         h.send(req);
