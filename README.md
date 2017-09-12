@@ -136,6 +136,16 @@ duplicates as it matches on the Id.
     
     MATCH (n { Id: '00Q1I000001xNBdUAM' })
     DETACH DELETE n
+    
+# Querying Data
+
+##### Matching By Id
+
+    MATCH (n{Id:'0010x000002IHpJAAW'}) return n;
+
+##### Matching Node and Relationships
+
+    MATCH (n{Id:'0010x000002IHpJAAW'})-[r]-(b) return b.name, labels(b);
    
 
     
