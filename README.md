@@ -56,6 +56,8 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
     1. Update `GraphConnectURL` with `https://dev.hardingpoint.com/v9.3/api`
     1. Update `authorizationToken` with `HARDINGPOINT321`
         1. (This token is temporary until Heroku Add-On Released you will get the token from Heroku Settings)
+        1. Request Early Access by emailing EarlyAccess@HardingPoint.com your Heroku Username 
+        1. All Alpha testers will be given free access
         
 1. <a href="https://login.salesforce.com/02u" target="_new">Edit Connected App for Salesforce</a>
     1. update the `Callback URL` to be `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
