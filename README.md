@@ -16,6 +16,10 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
 * `Analytics & Reporting` - Uses Additional Package with your Engagement Graph
 
 # Installation Instructions
+
+1. ##### Request Alpha Access to [EngagementGraph AddOn](https://elements.heroku.com/addons/engagementgraph)
+    1. Email EarlyAccess@HardingPoint.com your Heroku Username
+
 1. <a href="https://id.heroku.com/login" target="_new">Login to Heroku</a> or <a href="https://signup.heroku.com" target="_new">Create Heroku Credentials</a>
 
 1. <a href="https://login.salesforce.com" target="_new">Login to Salesforce</a> or <a href="https://developer.salesforce.com/signup" target="_new">Create Salesforce Developer Edition</a>
@@ -50,7 +54,8 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
     1. Click on New Default Organization Level Value
     1. Update `graphdburl` with `GRAPHCONNECT_URL` from Heroku Config
     1. Update `GraphConnectURL` with `https://dev.hardingpoint.com/v9.3/api`
-    1. Update `authorizationToken` with `HARDINGPOINT321` (This is temporary for testing)
+    1. Update `authorizationToken` with `HARDINGPOINT321`
+        1. (This token is temporary until Heroku Add-On Released you will get the token from Heroku Settings)
         
 1. <a href="https://login.salesforce.com/02u" target="_new">Edit Connected App for Salesforce</a>
     1. update the `Callback URL` to be `https://<YOUR_APP_NAME>.herokuapp.com/_oauth_callback`
