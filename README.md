@@ -48,14 +48,18 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
         1. Values from above when you created 'Connected App' in Salesforce.
     1. Go to Heroku Config Vars copy `GRAPHCONNECT_URL`  (Needed in Salesforce)
 
+1. ##### Check email for Alpha Invite
+    1. Install `engagementgraph` after receiving the invite from Heroku.  Command below.
+        1. [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+        1. heroku addons:create engagementgraph:test --app YOUR_APP_NAME_HERE
+
 1. <a href="https://login.salesforce.com/setup/ui/listCustomSettings.apexp" target="_new">Update Custom Settings</a>
     1. Click on HardingPoint
     1. Click on Manage
     1. Click on New Default Organization Level Value
-    1. Update `graphdburl` with `GRAPHCONNECT_URL` from Heroku Config
-    1. Update `GraphConnectURL` with `https://dev.hardingpoint.com/v9.3/api`
-    1. Update `authorizationToken` with `HARDINGPOINT321`
-        1. (This token is temporary until Heroku Add-On Released you will get the token from Heroku Settings)
+    1. Update `graphdburl` with `GRAPHCONNECT_URL` from Heroku Config Variables
+    1. Update `GraphConnectURL` with `ENGAGEMENTGRAPH_URL` from Heroku Config Variables
+    1. Update `authorizationToken` with `ENGAGEMENTGRAPH_TOKEN` from Heroku Config Variables
         1. Request Early Access by emailing EarlyAccess@HardingPoint.com your Heroku Username 
         1. All Alpha testers will be given free access
         
