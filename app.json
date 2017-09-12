@@ -8,6 +8,9 @@
     {
       "plan": "graphenedb:chalk",
       "as": "GraphConnect"
+    },
+    {
+      "plan": "engagementgraph:test"
     }
   ],
   "env": {
