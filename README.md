@@ -51,8 +51,9 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
 1. ##### Check email for Alpha Invite `Will Be Removed After Release`
     1. Install `engagementgraph` after receiving the Alpha invite from Heroku.  Command below.
         1. [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-        1. heroku login
-        1. heroku addons:create engagementgraph:test --app YOUR_APP_NAME_HERE
+        1. Running at Terminal or Command Prompt (After installing Heroku CLI)
+            1. heroku login
+            1. heroku addons:create engagementgraph:test --app YOUR_APP_NAME_HERE
 
 1. <a href="https://login.salesforce.com/setup/ui/listCustomSettings.apexp" target="_new">Update Custom Settings</a>
     1. Click on HardingPoint
