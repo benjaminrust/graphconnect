@@ -48,7 +48,7 @@ require(["angular"], function(angular) {
         $scope.name = "GraphConnect";
         $scope.sobject = null;
         $scope.events = {};
-        $scope.url = "https://dev.hardingpoint.com/v9.3/api";
+        $scope.url = "https://prod.hardingpoint.com/v9.3/api";
 
         // $scope.url = "https://d9pqkmtkwj.execute-api.us-east-1.amazonaws.com/dev/api";
       };
