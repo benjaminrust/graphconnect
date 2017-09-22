@@ -24,7 +24,7 @@ public class Webhook {
         Http h = new Http();
         HttpRequest req = new HttpRequest();
         HardingPoint__c hpd = HardingPoint__c.getOrgDefaults();
-        if (hpd.GraphConnectURL__c!=''){
+        if (hpd.APIURL__c!=''){
             req.setEndpoint(hpd.APIURL__c);
         }else{
             req.setEndpoint(url);
