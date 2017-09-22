@@ -36,11 +36,10 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
         
 1. <a href="https://login.salesforce.com/setup/ui/listCustomSettings.apexp" target="_new">Create a Salesforce Custom Setting</a>
     1. Create Salesforce.com Custom Setting `HardingPoint as Hierarchy/Public`
-    1. Create New Custom Field in HardingPoint Custom Setting `Name:authorizationToken Field Type: Text(255)`
-    1. Create New Custom Field in HardingPoint Custom Setting `Name:GatewayAccessToken Field Type: Text(255)`
-    1. Create New Custom Field in HardingPoint Custom Setting `Name:GraphConnectURL Field Type: URL`
-    1. Create New Custom Field in HardingPoint Custom Setting `Name:graphdburl Field Type:URL Click Save` (Leave 
-        page open we will change after install)
+    1. Create New Custom Field in HardingPoint Custom Setting `Name:ApiToken Field Type: Text(255)`
+    1. Create New Custom Field in HardingPoint Custom Setting `Name:APIURL Field Type: URL`
+    1. Create New Custom Field in HardingPoint Custom Setting `Name:graphdburl Field Type:URL Click Save`
+    1. Create New Custom Field in HardingPoint Custom Setting `Name:GatewayToken Field Type: Text(255)`
 
 1. [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
@@ -60,10 +59,10 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
     1. Click on HardingPoint
     1. Click on Manage
     1. Click on New Default Organization Level Value
-    1. Update `graphdburl` with `GRAPHCONNECT_URL` from Heroku Config Variables
-    1. Update `GraphConnectURL` with `ENGAGEMENTGRAPH_URL` from Heroku Config Variables
-    1. Update `GatewayAccessToken` with `ENGAGEMENTGRAPH_GATEWAYACCESSTOKEN` from Heroku Config Variables
-    1. Update `authorizationToken` with `ENGAGEMENTGRAPH_TOKEN` from Heroku Config Variables
+    1. Update `graphdburl` with `GRAPHCONNECT_URL` from Heroku Config Variables (You can use any Neo4j URL)
+    1. Update `APIURL` with `ENGAGEMENTGRAPH_APIURL` from Heroku Config Variables
+    1. Update `GatewayToken` with `ENGAGEMENTGRAPH_GATEWAYTOKEN` from Heroku Config Variables
+    1. Update `ApiToken` with `ENGAGEMENTGRAPH_APITOKEN` from Heroku Config Variables
         1. Request Early Access by emailing EarlyAccess@HardingPoint.com your Heroku Username 
         1. All Alpha testers will be given free access
         

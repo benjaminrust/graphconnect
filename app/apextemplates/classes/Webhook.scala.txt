@@ -25,14 +25,14 @@ public class Webhook {
         HttpRequest req = new HttpRequest();
         HardingPoint__c hpd = HardingPoint__c.getOrgDefaults();
         if (hpd.GraphConnectURL__c!=''){
-            req.setEndpoint(hpd.GraphConnectURL__c);
+            req.setEndpoint(hpd.APIURL__c);
         }else{
             req.setEndpoint(url);
         }
         req.setMethod('POST');
         req.setHeader('Content-Type', 'application/json');
-        req.setHeader('authorizationToken', hpd.authorizationToken__c);
-        req.setHeader('x-api-key', hpd.GatewayAccessToken__c);
+        req.setHeader('authorizationToken', hpd.ApiToken__c);
+        req.setHeader('x-api-key', hpd.GatewayToken__c);
         req.setHeader('organizationId', UserInfo.getOrganizationId() );
         req.setBody(content);
         h.send(req);
