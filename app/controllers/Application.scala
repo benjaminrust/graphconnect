@@ -56,7 +56,10 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
 
   def getWebhooks = ConnectionAction.async { request =>
     forceUtil.getApexTriggers(request.env, request.sessionId).map { triggers =>
-      val rawWebhooks = triggers.filter(_.\("Name").as[String].endsWith("WebhookTrigger"))
+      // OLD
+      // val rawWebhooks = triggers.filter(_.\("Name").as[String].endsWith("Webh@@kTrigger"))
+      // NEW
+      val rawWebhooks = triggers.filter(_.\("Name").as[String].startsWith("HardingPoint"))
 
       val webhooks = rawWebhooks.map { webhook =>
         val name = (webhook \ "Name").as[String]

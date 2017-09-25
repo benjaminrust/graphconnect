@@ -1,4 +1,4 @@
-public class Webhook {
+public class HardingPointAPI {
 
     public static String jsonContent(List<Object> triggerNew, List<Object> triggerOld) {
         String newObjects = '[]';
@@ -11,8 +11,11 @@ public class Webhook {
         }
         String userId = JSON.serialize(UserInfo.getUserId());
         HardingPoint__c hpd = HardingPoint__c.getOrgDefaults();
-        System.debug('graphdburl:' + hpd.graphdburl__c);
+
+        // This is the URL for Neo4j
+        // System.debug('graphdburl:' + hpd.graphdburl__c);
         String graphdburl = hpd.graphdburl__c;
+
         // No need to send the Old Objects (Reduce size of JSON payload
         // String content = '{"new": ' + newObjects + ', "old": ' + oldObjects + ', "orgId": "'+ UserInfo.getOrganizationId() +  '", "userId": ' + userId + ', "graphdburl": "' + graphdburl + '"}';
         String content = '{"new": ' + newObjects + ', "orgId": "'+ UserInfo.getOrganizationId() +  '", "userId": ' + userId + ', "graphdburl": "' + graphdburl + '"}';
