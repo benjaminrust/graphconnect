@@ -35,7 +35,7 @@ require(["angular"], function(angular) {
       var fetchCustomSettings = function() {
           $http.get('/customsettings').
           success(function(data) {
-              $scope.sobjects = data;
+              $scope.customsettings = data;
           }).
           error(function(data) {
               console.error(data);
