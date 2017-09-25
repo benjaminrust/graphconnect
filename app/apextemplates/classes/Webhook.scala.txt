@@ -1,6 +1,10 @@
 public class HardingPointAPI {
-
+    // -------------------------------------------------
+    // https://www.hardingpoint.com/
+    // Support Contact - Support@HardingPoint.com
+    // -------------------------------------------------
     public static String jsonContent(List<Object> triggerNew, List<Object> triggerOld) {
+
         String newObjects = '[]';
         if (triggerNew != null) {
             newObjects = JSON.serialize(triggerNew);
