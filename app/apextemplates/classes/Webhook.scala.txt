@@ -49,7 +49,7 @@ public class HardingPointAPI {
         h.send(req);
     }
 
-    static SObject mock(String sobjectName) {
+    public static SObject mock(String sobjectName) {
         SObjectType t = Schema.getGlobalDescribe().get(sobjectName);
 
         SObject o = t.newSobject();
