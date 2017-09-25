@@ -32,15 +32,15 @@ require(["angular"], function(angular) {
           });
       };
 
-      var fetchCustomSettings = function() {
-          $http.get('/customsettings').
-          success(function(data) {
-              $scope.customsettings = data;
-          }).
-          error(function(data) {
-              console.error(data);
-          });
-      };
+      //var fetchCustomSettings = function() {
+      //    $http.get('/customsettings').
+      //    success(function(data) {
+      //        $scope.customsettings = data;
+      //    }).
+      //    error(function(data) {
+      //        console.error(data);
+      //    });
+      //};
 
       var fetchSobjects = function() {
         $http.get('/sobjects').
@@ -77,7 +77,7 @@ require(["angular"], function(angular) {
 
       fetchWebhooks();
       fetchSobjects();
-      fetchCustomSettings();
+      //fetchCustomSettings();
       initForm();
 
       $scope.createWebhook = function() {
