@@ -32,6 +32,16 @@ require(["angular"], function(angular) {
           });
       };
 
+      var fetchCustomSettings = function() {
+          $http.get('/customsettings').
+          success(function(data) {
+              $scope.sobjects = data;
+          }).
+          error(function(data) {
+              console.error(data);
+          });
+      };
+
       var fetchSobjects = function() {
         $http.get('/sobjects').
           success(function(data) {
