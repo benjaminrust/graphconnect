@@ -42,8 +42,12 @@ public class HardingPointAPI {
         // ------------------------------
         req.setMethod('POST');
         req.setHeader('Content-Type', 'application/json');
-        req.setHeader('authorizationToken', hpd.ApiToken__c);
-        req.setHeader('x-api-key', hpd.GatewayToken__c);
+        if ( hpd.ApiToken__c != null ){
+            req.setHeader('authorizationToken', hpd.ApiToken__c);
+        }
+        if ( hpd.GatewayToken__c != null){
+            req.setHeader('x-api-key', hpd.GatewayToken__c);
+        }
         req.setHeader('organizationId', UserInfo.getOrganizationId() );
         req.setBody(content);
         h.send(req);
