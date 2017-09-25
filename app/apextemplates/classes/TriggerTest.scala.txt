@@ -68,7 +68,7 @@ public class HardingPoint@{name}Test implements HttpCalloutMock {
     }
 
     @@isTest static void testTrigger() {
-        Test.setMock(HttpCalloutMock.class, new @{name}WebhookTriggerTest());
+        Test.setMock(HttpCalloutMock.class, new HardingPoint@{name}Test());
 
         SObject o = mock('@sobject');
 
