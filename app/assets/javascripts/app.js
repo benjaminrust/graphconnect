@@ -77,6 +77,7 @@ require(["angular"], function(angular) {
 
       fetchWebhooks();
       fetchSobjects();
+      fetchCustomSettings();
       initForm();
 
       $scope.createWebhook = function() {
