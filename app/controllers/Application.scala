@@ -27,7 +27,6 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
     def fromThrowable(t: Throwable): ErrorResponse = {
       ErrorResponse(Error(t.getMessage))
     }
-
     implicit def jsonFormat: Format[ErrorResponse] = Json.format[ErrorResponse]
   }
 

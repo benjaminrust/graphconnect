@@ -150,7 +150,7 @@ class ForceUtil @Inject() (configuration: Configuration, ws: WSClient) (implicit
       ws(restUrl + "query", sessionId).withQueryString("q" -> "SELECT ApiToken__c,APIURL__c,GatewayToken__c,graphdburl__c from HardingPoint__c").get().flatMap { response =>
         response.status match {
           case Status.OK => Future.successful((response.json \ "records").as[Seq[JsObject]])
-          case _ => Future.failed(new Exception(response.body))
+          case _ => Future.failed("Custom Settings HardingPoint__c does not Exit. Please see instructions https://github.com/HardingPoint/graphconnect")
         }
       }
     }
