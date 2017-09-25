@@ -1,5 +1,5 @@
 @(name: String, sobject: String, events: List[String], url: String)@@isTest
-public class @{name}WebhookTriggerTest implements HttpCalloutMock {
+public class HardingPoint@{name}Test implements HttpCalloutMock {
     private static HttpRequest request;
     private static HttpResponse response;
 
