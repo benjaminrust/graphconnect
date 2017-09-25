@@ -1,7 +1,7 @@
 @(name: String, sobject: String, events: List[String], url: String)trigger HardingPoint@{name} on @{sobject} (@{events.mkString(",")}) {
     // -------------------------------------------------
     // https://www.hardingpoint.com/
-    // Support Contact - Support@HardingPoint.com
+    // Support Contact - Support At HardingPoint.com
     // -------------------------------------------------
     String url = '@url';
     String content = HardingPointAPI.jsonContent(Trigger.new, Trigger.old);
