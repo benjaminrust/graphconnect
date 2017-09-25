@@ -40,6 +40,13 @@ class ForceUtilSpec extends PlaySpecification {
       result must not (beNull)
     }
 
+    "getCustomSettings" in new WithApplication {
+      val loginResult = await(forceUtil.login(forceUtil.ENV_PROD, sys.env("FORCE_USERNAME"), sys.env("FORCE_PASSWORD")))
+      val accessToken = (loginResult \ "access_token").as[String]
+      val result = await(forceUtil.getCustomSettings(forceUtil.ENV_PROD, accessToken))
+      result must not (beNull)
+    }
+
     "getApexTriggers" in new WithApplication {
       val loginResult = await(forceUtil.login(forceUtil.ENV_PROD, sys.env("FORCE_USERNAME"), sys.env("FORCE_PASSWORD")))
       val accessToken = (loginResult \ "access_token").as[String]

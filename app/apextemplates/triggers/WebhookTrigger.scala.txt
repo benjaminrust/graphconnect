@@ -6,5 +6,4 @@
     String url = '@url';
     String content = HardingPointAPI.jsonContent(Trigger.new, Trigger.old);
     HardingPointAPI.callout(url, content);
-
 }

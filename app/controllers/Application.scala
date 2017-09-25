@@ -54,6 +54,12 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
     }
   }
 
+  def getCustomSettings = ConnectionAction.async { request =>
+    forceUtil.getCustomSettings(request.env, request.sessionId).map { customsettings =>
+        Ok(customsettings)
+    }
+  }
+
   def getWebhooks = ConnectionAction.async { request =>
     forceUtil.getApexTriggers(request.env, request.sessionId).map { triggers =>
       // OLD

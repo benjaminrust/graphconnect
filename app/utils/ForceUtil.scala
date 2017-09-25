@@ -145,6 +145,17 @@ class ForceUtil @Inject() (configuration: Configuration, ws: WSClient) (implicit
     }
   }
 
+  def getCustomSettings(env: String, sessionId: String): Future[Seq[JsObject]] = {
+    restUrl(env, sessionId).flatMap { restUrl =>
+      ws(restUrl + "tooling/query", sessionId).withQueryString("q" -> "SELECT ApiToken__c,APIURL__c,GatewayToken__c,graphdburl__c from HardingPoint__c").get().flatMap { response =>
+        response.status match {
+          case Status.OK => Future.successful((response.json \ "records").as[Seq[JsObject]])
+          case _ => Future.failed(new Exception(response.body))
+        }
+      }
+    }
+  }
+
   def getApexTriggers(env: String, sessionId: String): Future[Seq[JsObject]] = {
     restUrl(env, sessionId).flatMap { restUrl =>
       ws(restUrl + "tooling/query", sessionId).withQueryString("q" -> "SELECT Name, Body from ApexTrigger").get().flatMap { response =>
