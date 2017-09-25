@@ -11,6 +11,8 @@ GET         /app                    controllers.Application.app
 
 GET         /sobjects               controllers.Application.getSobjects
 
+GET         /customsettings         controllers.Application.getCustomSettings
+
 GET         /webhooks               controllers.Application.getWebhooks
 POST        /webhooks               controllers.Application.createWebhook
 
