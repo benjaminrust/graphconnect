@@ -95,6 +95,10 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
           case e: forceUtil.DuplicateException => Json.obj()
         }
 
+        hardingpointbatchCreate <- forceUtil.createApexClass(request.env, request.sessionId, "HardingPointBatch", apextemplates.classes.txt.HardingPointBatch().body).recover {
+          case e: forceUtil.DuplicateException => Json.obj()
+        }
+
         remoteSiteSettingCreate <- forceUtil.createRemoteSite(request.env, request.sessionId, triggerMetadata.name + "RemoteSiteSetting", triggerMetadata.url)
 
         triggerBody = apextemplates.triggers.txt.WebhookTrigger(triggerMetadata.name, triggerMetadata.sobject, triggerMetadata.events.map(_.toString), triggerMetadata.url).body
