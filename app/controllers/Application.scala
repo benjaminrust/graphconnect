@@ -106,6 +106,8 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
 
         triggerTestBody = apextemplates.classes.txt.TriggerTest(triggerMetadata.name, triggerMetadata.sobject, triggerMetadata.events.map(_.toString), triggerMetadata.url).body
         triggerTestCreate <- forceUtil.createApexClass(request.env, request.sessionId, triggerMetadata.name, triggerTestBody)
+
+        processHistory <- forceUtil.processHistory(request.env, request.sessionId, triggerMetadata.name, "HardingPointBatch.ProcessHistory('" + triggerMetadata.sobject + "');", triggerMetadata.sobject)
       } yield (webhookCreate, remoteSiteSettingCreate, triggerCreate, triggerTestCreate)
 
       webhookCreateFuture.map(_ => Ok(Results.EmptyContent())).recover {

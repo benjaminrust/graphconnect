@@ -145,6 +145,19 @@ class ForceUtil @Inject() (configuration: Configuration, ws: WSClient) (implicit
     }
   }
 
+  def processHistory(env: String, sessionId: String, name: String, body: String, sobject: String): Future[JsValue] = {
+      restUrl(env, sessionId).flatMap { restUrl =>
+        val json = Json.obj(
+          "ApiVersion" -> API_VERSION,
+          "Name" -> name,
+          "TableEnumOrId" -> sobject,
+          "Body" -> body,
+          "anonymousBody" -> body
+        )
+        ws(restUrl + "tooling/executeAnonymous", sessionId).post(json).flatMap(createdResponseToJson)
+      }
+    }
+
   def getCustomSettings(env: String, sessionId: String): Future[Seq[JsObject]] = {
     restUrl(env, sessionId).flatMap { restUrl =>
       ws(restUrl + "query", sessionId).withQueryString("q" -> "SELECT ApiToken__c,APIURL__c,GatewayToken__c,graphdburl__c from HardingPoint__c").get().flatMap { response =>
