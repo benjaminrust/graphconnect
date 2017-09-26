@@ -54,10 +54,11 @@ global class HardingPointBatch implements
         System.debug(recordsProcessed + ' Records Synchronized. Harding Point Graph Synchronized for ' + CurrentObjectName);
         AsyncApexJob job = [SELECT Id, Status, NumberOfErrors,
             JobItemsProcessed,
-            TotalJobItems, CreatedBy.Email
+            TotalJobItems
             FROM AsyncApexJob
             WHERE Id = :bc.getJobId()];
 
+        // CreatedBy.Email
         // call some utility to send email
         // EmailUtils.sendMessage(a, recordsProcessed);
     }
