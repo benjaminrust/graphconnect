@@ -26,6 +26,11 @@ public class HardingPointAPI {
         return content;
     }
 
+    public static void ProcessHistory(String ObjectName){
+        HardingPointBatch newbatch = new HardingPointBatch(ObjectName);
+        Database.executeBatch(newbatch, 10);
+    }
+
     public static void calloutnow(String url, String content) {
         Http h = new Http();
         HttpRequest req = new HttpRequest();
