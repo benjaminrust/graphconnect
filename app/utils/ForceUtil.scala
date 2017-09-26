@@ -171,7 +171,7 @@ class ForceUtil @Inject() (configuration: Configuration, ws: WSClient) (implicit
     restUrl(env, sessionId).flatMap { restUrl =>
       ws(restUrl + "tooling/query", sessionId).withQueryString("q" -> "SELECT Name, Body from ApexTrigger").get().flatMap { response =>
         response.status match {
-          case Status.OK => Future.successful((response.json \ "records").as[Seq[JsObject]])
+          case Status.OK => Future.successful(response.json)
           case _ => Future.failed(new Exception(response.body))
         }
       }
