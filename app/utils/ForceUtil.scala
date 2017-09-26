@@ -149,6 +149,7 @@ class ForceUtil @Inject() (configuration: Configuration, ws: WSClient) (implicit
       restUrl(env, sessionId).flatMap { restUrl =>
         ws(restUrl + "tooling/executeAnonymous", sessionId).withQueryString("anonymousBody" -> body).get().flatMap { response =>
             response.status match {
+                case Status.OK => Future.successful(response.body.as[Seq[JsObject]])
                 case _ => Future.failed(new Exception(response.body))
             }
          }
