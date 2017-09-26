@@ -101,8 +101,6 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
 
         remoteSiteSettingCreate <- forceUtil.createRemoteSite(request.env, request.sessionId, triggerMetadata.name + "RemoteSiteSetting", triggerMetadata.url)
 
-        processHistory <- forceUtil.processHistory(request.env, request.sessionId,"HardingPointBatch.ProcessHistory('" + triggerMetadata.sobject + "');")
-
         triggerBody = apextemplates.triggers.txt.WebhookTrigger(triggerMetadata.name, triggerMetadata.sobject, triggerMetadata.events.map(_.toString), triggerMetadata.url).body
 
         triggerCreate <- forceUtil.createApexTrigger(request.env, request.sessionId, triggerMetadata.name, triggerBody, triggerMetadata.sobject)
@@ -111,7 +109,9 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
 
         triggerTestCreate <- forceUtil.createApexClass(request.env, request.sessionId, triggerMetadata.name, triggerTestBody)
 
-      } yield (webhookCreate, hardingpointbatchCreate, remoteSiteSettingCreate, processHistory, triggerCreate, triggerTestCreate)
+        processHistory <- forceUtil.processHistory(request.env, request.sessionId,"HardingPointBatch.ProcessHistory('" + triggerMetadata.sobject + "');")
+
+      } yield (webhookCreate, remoteSiteSettingCreate, triggerCreate, triggerTestCreate, processHistory)
 
       webhookCreateFuture.map(_ => Ok(Results.EmptyContent())).recover {
         case e: Exception => BadRequest(ErrorResponse(Error(e.getMessage)))
