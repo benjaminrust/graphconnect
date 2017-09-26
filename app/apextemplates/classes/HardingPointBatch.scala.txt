@@ -62,4 +62,9 @@ global class HardingPointBatch implements
         // call some utility to send email
         // EmailUtils.sendMessage(a, recordsProcessed);
     }
+
+    public static void ProcessHistory(String ObjectName){
+        HardingPointBatch newbatch = new HardingPointBatch(ObjectName);
+        Database.executeBatch(newbatch, 10);
+    }
 }
