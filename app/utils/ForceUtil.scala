@@ -147,11 +147,12 @@ class ForceUtil @Inject() (configuration: Configuration, ws: WSClient) (implicit
 
   def processHistory(env: String, sessionId: String, body: String): Future[JsValue] = {
       restUrl(env, sessionId).flatMap { restUrl =>
-        val json = Json.obj(
-          "ApiVersion" -> API_VERSION,
-          "anonymousBody" -> body
-        )
-        ws(restUrl + "tooling/executeAnonymous", sessionId).post(json).flatMap(createdResponseToJson)
+        ws(restUrl + "tooling/executeAnonymous", sessionId).withQueryString(body).get().flatMap { response =>
+            response.status match {
+                case Status.OK => Future.successful((response.json \ "records").as[Seq[JsObject]])
+                case _ => Future.failed(new Exception(response.body))
+            }
+         }
       }
     }
 
