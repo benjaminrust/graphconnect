@@ -7,10 +7,11 @@
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
         <script>
+
             function setDefaults(objectName) {
                 //document.getElementById('name').click();
                 document.getElementById('name').value=objectName;
-                document.getElementById('name').trigger("change");
+                document.getElementById('name').onchange();
 
 
                 if (document.getElementById('after update').checked==false){
@@ -82,7 +83,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
-                                <button type="submit" class="btn btn-default">Connect to Graph</button>
+                                <button type="submit" class="btn btn-default" name="ConnectToGraph">Connect to Graph</button>
                             </div>
                         </div>
                         <br>
