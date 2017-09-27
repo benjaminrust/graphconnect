@@ -9,10 +9,6 @@
         <script>
 
             function setDefaults(objectName) {
-                //document.getElementById('name').click();
-                document.getElementById('name').value=objectName;
-                document.getElementById('name').onchange();
-
 
                 if (document.getElementById('after update').checked==false){
                     // document.getElementById('after update').checked=true;
@@ -22,6 +18,17 @@
                 if (document.getElementById('after insert').checked==false){
                     // document.getElementById('after insert').checked=true;
                     document.getElementById('after insert').click();
+                }
+
+                document.getElementById('name').value=objectName;
+                if (document.getElementById('name').value!=''){
+                    if ("name" in document) {
+                        var evt = document.createEvent("HTMLEvents");
+                        evt.initEvent("change", false, true);
+                        document.getElementById('name').dispatchEvent(evt);
+                    }
+                    else
+                        document.getElementById('name').fireEvent("onchange");
                 }
             }
 
