@@ -7,6 +7,15 @@
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
         <script>
+            $("sobject").on("change", function() {
+                $("#name").text($(this).val());
+            });
+
+            $("ConnectToGraph").click(function() {
+                $("sobject").val(1);
+                $("sobject").trigger("change");
+            });
+
             function setDefaults(objectName) {
 
                 if (document.getElementById('after update').checked==false){
