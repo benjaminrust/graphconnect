@@ -8,6 +8,8 @@
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
         <script>
 
+            var DoPageReload = false;
+
             function setDefaults(objectName) {
 
                 if (document.getElementById('after update').checked==false){
@@ -27,6 +29,14 @@
                     el.value=objectName;
                     el.dispatchEvent(new Event('change'));
                     //alert('After');
+                    DoPageReload = true;
+                }
+            }
+
+            function pageReload(){
+                if (DoPageReload){
+                    alert("Reloading");
+                    window.location.reload();
                 }
             }
 
@@ -76,7 +86,7 @@
                     </tbody>
                 </table>
                 <h2>Create a new GraphConnect</h2>
-                <form name="webhookForm" role="form" class="form-horizontal" ng-submit="createWebhook()">
+                <form name="webhookForm" role="form" class="form-horizontal" ng-submit="createWebhook()" onload="pageReload();">
                     <fieldset name="fields" ng-disabled="working">
                         <div class="form-group">
                             <label for="sobject" class="col-sm-3 control-label">SObject</label>
