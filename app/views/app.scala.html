@@ -7,6 +7,12 @@
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
         <script>
+            function setDefaults(objectName) {
+                document.getElementById('name').value=objectName;
+                document.getElementById('after update').checked=true;
+                document.getElementById('after insert').checked=true;
+            }
+
             @maybeAssetsUrl.fold {
                 @Html(org.webjars.RequireJS.getSetupJavaScript(routes.WebJarAssets.at("").url))
             } { assetsUrl =>
@@ -53,12 +59,12 @@
                     </tbody>
                 </table>
                 <h2>Create a new GraphConnect</h2>
-                <form name="webhookForm" role="form" class="form-horizontal" ng-submit="createWebhook()" onload="document.getElementById('after update').checked=true;">
+                <form name="webhookForm" role="form" class="form-horizontal" ng-submit="createWebhook()">
                     <fieldset name="fields" ng-disabled="working">
                         <div class="form-group">
                             <label for="sobject" class="col-sm-3 control-label">SObject</label>
                             <div class="col-sm-6">
-                                <select id="sobject" name="sobject" class="form-control" ng-model="sobject" required onchange="document.getElementById('name').value=this.value;">
+                                <select id="sobject" name="sobject" class="form-control" ng-model="sobject" required onchange="setDefaults(this.value);">
                                     <option ng-repeat="sobject in sobjects">{{sobject}}</option>
                                 </select>
                             </div>
