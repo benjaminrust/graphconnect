@@ -65,7 +65,7 @@
                         <div class="form-group">
                             <label for="sobject" class="col-sm-3 control-label">SObject</label>
                             <div class="col-sm-6">
-                                <select id="sobject" name="sobject" class="form-control" ng-model="sobject" required>
+                                <select id="sobject" name="sobject" class="form-control" ng-model="sobject" required onchange="document.getElementById('name').value=this.value;">
                                     <option ng-repeat="sobject in sobjects">{{sobject}}</option>
                                 </select>
                             </div>
