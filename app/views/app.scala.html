@@ -77,12 +77,14 @@
                             <label for="name" class="col-sm-3 control-label">Name</label>
                             <div class="col-sm-6">
                                 <input type="text" class="form-control" id="name" name="name" ng-model="name" ng-pattern="/[a-zA-Z]/" required>
+                                Will automatically add "HardingPoint" to the Name, must be unique. Use default unless adding multiple to one object.
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="url" class="col-sm-3 control-label">URL</label>
                             <div class="col-sm-6">
                                 <input type="url" class="form-control" id="url" name="url" ng-model="url" required>
+                                Default Harding Point Graph Connect API. Use default unless you are sending to Engagement Manager.
                             </div>
                         </div>
                         <div class="form-group" style="margin-right: 5px;">
