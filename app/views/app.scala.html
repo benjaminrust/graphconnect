@@ -22,13 +22,9 @@
 
                 document.getElementById('name').value=objectName;
                 if (document.getElementById('name').value!=''){
-                    if ("name" in document) {
-                        var evt = document.createEvent("HTMLEvents");
-                        evt.initEvent("change", false, true);
-                        document.getElementById('name').dispatchEvent(evt);
-                    }
-                    else
-                        document.getElementById('name').fireEvent("onchange");
+                    alert('Before');
+                    var $myInput = $('#name').on('change', objectName);
+                    alert('After');
                 }
             }
 
