@@ -23,7 +23,7 @@
                 document.getElementById('name').value=objectName;
                 if (document.getElementById('name').value!=''){
                     alert('Before');
-                    var $myInput = $('#name').on('change', objectName);
+                    document.getElementById("name").onchange();
                     alert('After');
                 }
             }
