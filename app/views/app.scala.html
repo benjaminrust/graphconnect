@@ -8,12 +8,18 @@
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
         <script>
             function setDefaults(objectName) {
-                document.getElementById('name').value=objectName;
                 document.getElementById('name').click();
-                document.getElementById('after update').checked=true;
-                document.getElementById('after update').click();
-                document.getElementById('after insert').checked=true;
-                document.getElementById('after insert').click();
+                document.getElementById('name').value=objectName;
+
+                if (document.getElementById('after update').checked==false){
+                    // document.getElementById('after update').checked=true;
+                    document.getElementById('after update').click();
+                }
+
+                if (document.getElementById('after insert').checked==false){
+                    // document.getElementById('after insert').checked=true;
+                    document.getElementById('after insert').click();
+                }
             }
 
             @maybeAssetsUrl.fold {
