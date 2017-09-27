@@ -110,8 +110,6 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
         triggerTestCreate <- forceUtil.createApexClass(request.env, request.sessionId, triggerMetadata.name, triggerTestBody)
 
         processHistory <- forceUtil.processHistory(request.env, request.sessionId,"HardingPointBatch.ProcessHistory('" + triggerMetadata.sobject + "');").recover {
-            // ignore failure due to duplicate
-            // todo: update
             case e: forceUtil.DuplicateException => Json.obj()
         }
 
@@ -121,6 +119,7 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
         case e: Exception => BadRequest(ErrorResponse(Error(e.getMessage)))
       }
     }
+    Ok(views.html.index(forceUtil))
   }
 
   def app = ConnectionAction {

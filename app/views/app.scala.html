@@ -22,11 +22,11 @@
 
                 document.getElementById('name').value=objectName;
                 if (document.getElementById('name').value!=''){
-                    alert('Before');
+                    //alert('Before');
                     var el = document.getElementById('name');
                     el.value=objectName;
                     el.dispatchEvent(new Event('change'));
-                    alert('After');
+                    //alert('After');
                 }
             }
 
@@ -88,7 +88,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
-                                <button type="submit" class="btn btn-default" name="ConnectToGraph" onchange="alert(this);">Connect to Graph</button>
+                                <button type="submit" class="btn btn-default" name="ConnectToGraph">Connect to Graph</button>
                             </div>
                         </div>
                         <br>
