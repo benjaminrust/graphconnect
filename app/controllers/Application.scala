@@ -113,13 +113,12 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
             case e: forceUtil.DuplicateException => Json.obj()
         }
 
-      } yield (webhookCreate, remoteSiteSettingCreate, triggerCreate, triggerTestCreate, processHistory)
+      } yield (webhookCreate, remoteSiteSettingCreate, triggerCreate, triggerTestCreate)
 
       webhookCreateFuture.map(_ => Ok(Results.EmptyContent())).recover {
         case e: Exception => BadRequest(ErrorResponse(Error(e.getMessage)))
       }
     }
-    Ok(views.html.index(forceUtil))
   }
 
   def app = ConnectionAction {
