@@ -39,8 +39,7 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
     }
     else {
       if (request("reprocess")){
-        val processCmd = "HardingPointBatch.ProcessHistory('" + request("reprocess") + "');"
-        forceUtil.processHistory(request.env, request.sessionId,processCmd)
+        val processCmd = "HardingPointBatch.ProcessHistory('" + request("reprocess").as[String] + "');"
       }
       Ok(views.html.index(forceUtil))
     }
