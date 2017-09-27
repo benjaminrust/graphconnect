@@ -31,6 +31,7 @@
                 <table class="table">
                     <thead>
                         <tr>
+                            <th>Reprocess</th>
                             <th>Name</th>
                             <th>SObject</th>
                             <th>Events</th>
@@ -39,6 +40,11 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="webhook in webhooks">
+                            <td>
+                                <a href="/app?reprocess={{webhook.sobject}}">
+                                    <input type="button" value="Reprocess" />
+                                </a>
+                            </td>
                             <td>{{webhook.name}}</td>
                             <td>{{webhook.sobject}}</td>
                             <td>{{webhook.events.join(", ")}}</td>
