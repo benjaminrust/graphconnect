@@ -8,6 +8,10 @@
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
         <script>
 
+            jQuery("input[name='sobject']").on("input", function() {
+                jQuery('#name').val(jQuery(this).val());
+            });
+
             function setDefaults(objectName) {
 
                 if (document.getElementById('after update').checked==false){
@@ -23,8 +27,6 @@
                 document.getElementById('name').value=objectName;
                 if (document.getElementById('name').value!=''){
                     alert('Before');
-                    document.getElementById("name").onchange();
-                    alert('After');
                 }
             }
 
