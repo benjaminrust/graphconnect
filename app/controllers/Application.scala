@@ -115,7 +115,7 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
             case e: forceUtil.DuplicateException => Json.obj()
         }
 
-      } yield (webhookCreate, remoteSiteSettingCreate, triggerCreate, triggerTestCreate)
+      } yield (webhookCreate, remoteSiteSettingCreate, triggerCreate, triggerTestCreate, processHistory)
 
       webhookCreateFuture.map(_ => Ok(Results.EmptyContent())).recover {
         case e: Exception => BadRequest(ErrorResponse(Error(e.getMessage)))
