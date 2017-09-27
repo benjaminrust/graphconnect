@@ -38,8 +38,8 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
       Redirect(routes.Application.app())
     }
     else {
-      if (request["reprocess"]){
-        processHistory <- forceUtil.processHistory(request.env, request.sessionId,"HardingPointBatch.ProcessHistory('" + request["reprocess"] + "');")
+      if (request("reprocess")){
+        processHistory <- forceUtil.processHistory(request.env, request.sessionId,"HardingPointBatch.ProcessHistory('" + request("reprocess") + "');")
       }
       Ok(views.html.index(forceUtil))
     }
