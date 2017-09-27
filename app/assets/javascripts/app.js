@@ -55,7 +55,7 @@ require(["angular"], function(angular) {
       var initForm = function() {
         $scope.working = false;
         $scope.errorMessage = "";
-        $scope.name = "GraphConnect";
+        $scope.name = "<Select Object Please>";
         $scope.sobject = null;
         $scope.events = {};
         $scope.url = "https://prod.hardingpoint.com/v9.3/api";
