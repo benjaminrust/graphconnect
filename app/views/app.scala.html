@@ -9,8 +9,11 @@
         <script>
             function setDefaults(objectName) {
                 document.getElementById('name').value=objectName;
+                document.getElementById('name').click();
                 document.getElementById('after update').checked=true;
+                document.getElementById('after update').click();
                 document.getElementById('after insert').checked=true;
+                document.getElementById('after insert').click();
             }
 
             @maybeAssetsUrl.fold {
