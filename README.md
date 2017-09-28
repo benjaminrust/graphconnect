@@ -76,52 +76,38 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
 1. Click [`Login via Salesforce - Normal Instance`]
 
     1. If you get a `Routing` error it is because Salesforce has not finished updating (wait 4 minutes)
-    
-1. Change Name to `Account` (It must be unique and has a limit)
 
 1. Select SObject `Account` from SObject Dropdown
 
-1. Select [`After Insert`] and [`After Update`]
-
 1. Click [`Connect to Graph`]
 
+(It will automatically process the history)
 
-# Testing Engagement Graph
+![Harding Point Connecth](https://static.wixstatic.com/media/983560_433e31decb984e7caba4de2bcc4e8a54~mv2_d_3076_1874_s_2.png/v1/fill/w_1897,h_1156,al_c,usm_0.66_1.00_0.01/983560_433e31decb984e7caba4de2bcc4e8a54~mv2_d_3076_1874_s_2.png)
+
+
+# View Graph
     
-1. <a href="https://login.salesforce.com/001" target="_new">Update a Few Account Records</a> - modify any data (Sends them to Graph)
-
-1. Visit Graph
     
     1. Go back to your Heroku Dashboard and into <YOUR_APP_NAME>
     1. Click Resources
     1. Click GrapheneDB
         1. Scroll to bottom click `Launch` for Neo4j Browser
         1. Click Icon Top Left Corner
-        1. You should see your object listed Click on it (ex Lead)
+        1. You should see your object listed Click on it (ex Account)
         
         
 # Reproducing Engagement Graph From Above Image
-    
-1. Unlocking Hidden Connections
 
-    1. [Deploy Graph Connect](http://www.HardingPoint.com) to User, Contact, Opportunity, Case
-        1. Following "Deploying Engagement Graph" from Above for all objects listed above @ https://<YOUR_APP_NAME>.herokuapp.com
-    1. Update your user or a user associated with the records (we used a demo account)
-    1. Edit/Save your user <a href="All Users" target="_new">https://login.salesforce.com/005</a> - Change 1 piece of data
-    1. Go run the <a href="https://login.salesforce.com/001" target="_new">All Accounts View</a> - Mass update or update each record
-    1. Go run the <a href="https://login.salesforce.com/003" target="_new">All Contact View</a> - Mass update or update each record
-    1. Go run the <a href="https://login.salesforce.com/006" target="_new">All Opportunities View</a> - Mass update or update each record
-    1. Go run the <a href="https://login.salesforce.com/500" target="_new">All Closed Cased</a> - Mass update or update each record
-    1. Return to the Neo4j Browser 
-        1. Directions from "Visit Graph" from above
-        1. Click on "User"
-        1. Double click on your User in the Graph to expand relationships
-        
+    1. Deploy Graph Connect Account (Did above already)
+    1. Deploy Graph Connect Contact
+    1. Deploy Graph Connect Opportunity
+    1. Deploy Graph Connect Case
+    
         
 # Cleaning Graph
 
-The graph will automatically repopulate with any data which is inserted and/or updated. The graph will not insert 
-duplicates as it matches on the Id.
+When you deploy Graph Connect it automatically processes the history.
 
 ##### Delete All Data
     MATCH (n)
@@ -147,6 +133,14 @@ duplicates as it matches on the Id.
 ##### Matching Node and Relationships
 
     MATCH (n{Id:'0010x000002IHpJAAW'})-[r]-(b) return b.name, labels(b);
+    
+
+##### Return Node and All Relationships
+
+    MATCH (c:Account{sfdcid:"0013900001ZglUQAAZ"}) 
+    WITH c
+    OPTIONAL MATCH (c)-[r]-()
+    RETURN c, r
    
 
     
