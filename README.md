@@ -17,19 +17,6 @@ the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from
 
 # Installation Instructions
 
-## Use Live Demo
-[USE LIVE DEMO](https://graphconnect.herokuapp.com/)
-
-If you have the EngagementFramework Add-On installed and have created the custom settings in Salesforce you can simply 
-use the Live Demo.
-
-1. Complete Step #6 Below
-1. Complete Step #9 Below
-
-<B>OR</B>
-
-## Deploy your own version
-
 1. ##### Request Alpha Access to [EngagementGraph AddOn](https://elements.heroku.com/addons/engagementgraph)
     1. Email EarlyAccess@HardingPoint.com your Heroku Username
 
