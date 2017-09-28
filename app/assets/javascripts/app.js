@@ -29,6 +29,7 @@ require(["angular"], function(angular) {
           error(function(data) {
             $scope.working = false;
             $scope.errorMessage = data.error.message;
+            fetchWebhooks();
           });
       };
 
