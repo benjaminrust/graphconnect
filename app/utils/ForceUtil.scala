@@ -145,7 +145,7 @@ class ForceUtil @Inject() (configuration: Configuration, ws: WSClient) (implicit
     }
   }
 
-  def processHistory(env: String, sessionId: String, body: String): Future[Seq[JsObject]] = {
+  def processHistory(env: String, sessionId: String, body: String): String = {
     restUrl(env, sessionId).flatMap { restUrl =>
         ws(restUrl + "tooling/executeAnonymous", sessionId).withQueryString("anonymousBody" -> body).get().flatMap(createdResponseToJson)
     }
