@@ -28,7 +28,7 @@ use the Live Demo.
 
 <B>OR</B>
 
-##Install your own version below
+## Deploy your own version
 
 1. ##### Request Alpha Access to [EngagementGraph AddOn](https://elements.heroku.com/addons/engagementgraph)
     1. Email EarlyAccess@HardingPoint.com your Heroku Username
