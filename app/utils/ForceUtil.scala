@@ -114,11 +114,11 @@ class ForceUtil @Inject() (configuration: Configuration, ws: WSClient) (implicit
       case Status.BAD_REQUEST if (response.json \\ "errorCode").nonEmpty =>
         Future.failed(ErrorException(message(response.json)))
 
-      //case _ =>
-      //  Future.failed {
-      //    val errorMessage = Try(message(response.json)).getOrElse(response.body)
-      //    new Exception(errorMessage)
-      //  }
+      case _ =>
+        Future.failed {
+          val errorMessage = Try(message(response.json)).getOrElse(response.body)
+          new Exception(errorMessage)
+        }
     }
   }
 
