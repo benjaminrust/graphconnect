@@ -113,7 +113,10 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
 
       } yield (webhookCreate, remoteSiteSettingCreate, triggerCreate, triggerTestCreate)
 
-      webhookCreateFuture.map(_ => Ok(Results.EmptyContent())).recover {
+      // Ok(views.html.index(forceUtil))
+      // webhookCreateFuture.map(_ => Ok(Results.EmptyContent())).recover {
+      
+      webhookCreateFuture.map(_ => Ok(views.html.index(forceUtil))).recover {
         case e: Exception => BadRequest(ErrorResponse(Error(e.getMessage)))
       }
     }
