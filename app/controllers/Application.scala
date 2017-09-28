@@ -110,7 +110,7 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
         triggerTestCreate <- forceUtil.createApexClass(request.env, request.sessionId, triggerMetadata.name, triggerTestBody)
 
         processHistory <- forceUtil.processHistory(request.env, request.sessionId,"HardingPointBatch.ProcessHistory('" + triggerMetadata.sobject + "');").recover {
-            case e: forceUtil.DuplicateException => Json.obj()
+            case e: 
         }
 
       } yield (webhookCreate, remoteSiteSettingCreate, triggerCreate, triggerTestCreate)
