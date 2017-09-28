@@ -21,15 +21,12 @@ require(["angular"], function(angular) {
           url: url
         };
 
-        alert('createWebhook');
         $http.post('/webhooks', data).
           success(function(data) {
-            alert('Success');
             initForm();
             fetchWebhooks();
           }).
           error(function(data) {
-            alert('Error');
             fetchWebhooks();
             $scope.working = false;
             $scope.errorMessage = data.error.message;
