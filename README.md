@@ -10,12 +10,25 @@ reporting, and App Development. The more data and relationships you link with yo
 the quicker it builds, learns (via AI), and reacts (via Engagement Manager) from your [Neural Network](http://www.HardingPoint.com).
 
 * [`Graph Connect Deploy`](https://engagementgraph.herokuapp.com/) - Live Graph Connect  (Recommend following instructions below, if first time)
-* [`Engagement Browser` - Try Custom App Demo Now ](https://engagementbrowser.herokuapp.com/?neoid=0011I000003ExJzQAK) - Powered by Graph Connect - Synchronized from Salesforce
 * [`Engagement Manager & Orchestration` - Login: readonly/readonly](http://engage.hardingpoint.com/) - Uses Additional Package with your Engagement Graph
+* [`Engagement Browser` - Try Custom App Demo Now ](https://engagementbrowser.herokuapp.com/?neoid=0011I000003ExJzQAK) - Powered by Graph Connect - Synchronized from Salesforce
 * `Neural Network & AI` - Uses Additional Package on Top with your Engagement Graph
 * `Analytics & Reporting` - Uses Additional Package with your Engagement Graph
 
 # Installation Instructions
+
+## Use Live Demo
+[USE LIVE DEMO](https://engagementgraph.herokuapp.com/)
+
+If you have the EngagementFramework Add-On installed and have created the custom settings in Salesforce you can simply 
+use the Live Demo.
+
+1. Complete Step #6 Below
+1. Complete Step #9 Below
+
+<B>OR</B>
+
+##Install your own version below
 
 1. ##### Request Alpha Access to [EngagementGraph AddOn](https://elements.heroku.com/addons/engagementgraph)
     1. Email EarlyAccess@HardingPoint.com your Heroku Username
