@@ -109,7 +109,7 @@ class Application @Inject() (forceUtil: ForceUtil, ws: WSClient, configuration: 
 
         triggerTestCreate <- forceUtil.createApexClass(request.env, request.sessionId, triggerMetadata.name, triggerTestBody)
 
-        forceUtil.processHistory(request.env, request.sessionId,"HardingPointBatch.ProcessHistory('" + triggerMetadata.sobject + "');")
+        processHistory <- forceUtil.processHistory(request.env, request.sessionId,"HardingPointBatch.ProcessHistory('" + triggerMetadata.sobject + "');")
 
         //processHistory <- forceUtil.processHistory(request.env, request.sessionId,"HardingPointBatch.ProcessHistory('" + triggerMetadata.sobject + "');").recover {
         //    // Ignore everything
